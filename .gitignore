@@ -1,0 +1,47 @@
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+# Compiled Objects, Static and Dynamic libs, other artifacts
+*.o
+*.a
+*.so
+*.exe
+*.test
+*.prof
+*.tar.gz
+server/server
+
+# webstorm files
+.idea
+.vagrant
+.box
+
+# OS X Annoyances
+*.DS_Store
+
+# Terraform stuff
+*.tfstate
+
+# Folders
+_obj
+_test
+
+# Hashicorp product artifacts
+*.backup
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+# Folders to ignore
+/packer/packer_cache
+/client/dist
+/node_modules
+/client/bower_components
+/.idea
+/.vagrant
