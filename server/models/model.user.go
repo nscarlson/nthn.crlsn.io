@@ -3,6 +3,7 @@ package model
 import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
+	"fmt"
 )
 
 type User struct {
@@ -41,4 +42,15 @@ func (user *User) Delete(db *mgo.Database) error {
 	collection := db.C(Collection)
 
 	return collection.RemoveId(user.Id)
+}
+
+func (user *User) FullName() string {
+	var spacer string
+	if user.Firstname == "" || user.Lastname == "" {
+		spacer = ""
+	} else {
+		spacer = " "
+	}
+
+	return fmt.Sprint(user.Firstname, spacer, user.Lastname)
 }
