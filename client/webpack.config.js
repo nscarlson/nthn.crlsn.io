@@ -1,8 +1,13 @@
+var path = require('path');
+
 module.exports = {
-  entry: "./app/Blog.js",
+  entry: "./app/main.jsx",
   output: {
-    filename: "public/bundle.js"
+    filename: "./public/bundle.js",
+    path: ".",
+    publicPath: "./public"
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -14,5 +19,8 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    modulesDirectories: ['node_modules']
   }
 }
