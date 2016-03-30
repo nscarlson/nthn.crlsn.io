@@ -1,7 +1,7 @@
-import React from 'react'
-import Marked from 'marked'
+import React from 'react';
+import Marked from 'marked';
 
-export default class editor extends React.Component {
+export default class Editor extends React.Component {
 
   constructor (props) {
     super(props);

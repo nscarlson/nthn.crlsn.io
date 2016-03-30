@@ -1,11 +1,13 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./app/main.jsx",
+  entry: {
+      'main': 'app/main'
+  },
   output: {
-    filename: "./public/bundle.js",
-    path: ".",
-    publicPath: "./public"
+    filename: "[name].js",
+    path: "./public",
+    sourceMapFilename: '[file].map'
   },
   devtool: 'source-map',
   module: {
@@ -15,12 +17,16 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['es2015', 'react']
         }
       }
     ]
   },
   resolve: {
-    modulesDirectories: ['node_modules']
+    extensions: ['', '.js', '.jsx'],
+    modulesDirectories: ['node_modules'],
+    root: [
+        path.resolve('./')
+    ]
   }
-}
+};

@@ -48,3 +48,6 @@ _testmain.go
 /client/bower_components
 /.idea
 /.vagrant
+
+client/public/main.js
+client/public/main.js.map
