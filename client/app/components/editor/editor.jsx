@@ -27,7 +27,9 @@ export default class Editor extends React.Component {
         <textarea
           onChange={this.onChange.bind(this)}
           ref="textarea"
-          defaultValue={this.state.value} />
+          defaultValue={this.state.value}
+          style={{height: "490px", width: "100%", resize: "none"}}
+        />
         <h3>Output Stuff</h3>
         <div
           className="content"
