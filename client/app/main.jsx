@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AppComponent from 'app/components/editor/editor';
+import {ArticleList} from 'app/components/blog/ArticleList';
 
-ReactDOM.render(<AppComponent/>, document.getElementById('app') || document.body);
+ReactDOM.render(<ArticleList/>, document.getElementById('app') || document.body);

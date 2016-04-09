@@ -16,7 +16,7 @@ export default class Editor extends React.Component {
     this.setState({value: this.refs.textarea.value});
   }
 
-  rawMarkup() {
+  rawMarkup(String str) {
     return { __html: Marked(this.state.value, {sanitize: true}) };
   }
 

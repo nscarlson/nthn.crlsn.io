@@ -1,9 +1,21 @@
-//import { Router, Route, Link } from 'react-router'
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
 
-render(((
-  <Router history={browserHistory}>
-    <Route path="/home" component={App}>
-      <Route path="*" component={NoMatch}/>
-    </Route>
-  </Router>
-), document.body)
+import Editor from 'components/editor/editor';
+
+export default [
+  {
+    path: '/editor',
+    component: Editor,
+    indexRoute: {
+        component: Editor
+    },
+    childRoutes: [
+      {
+        path: '*',
+        component: Editor
+      }
+    ]
+  }
+];

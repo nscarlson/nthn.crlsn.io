@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.8.0",
+    "flux": "^2.1.1",
     "history": "^1.13.1",
     "marked": "^0.3.5",
     "react": "^0.14.3",
