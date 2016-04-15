@@ -12,6 +12,9 @@
 *.tar.gz
 server/server
 
+# Log files
+*.log
+
 # webstorm files
 .idea
 .vagrant
@@ -40,8 +43,12 @@ _testmain.go
 
 # Folders to ignore
 /packer/packer_cache
+/client/build
 /client/dist
-/node_modules
+/client/node_modules
 /client/bower_components
 /.idea
 /.vagrant
+
+client/public/main.js
+client/public/main.js.map
