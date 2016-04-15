@@ -43,6 +43,7 @@ _testmain.go
 
 # Folders to ignore
 /packer/packer_cache
+/client/build
 /client/dist
 /client/node_modules
 /client/bower_components
