@@ -1,6 +1,10 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+.active {
+  color: green;
+}
+
 .switch {
   $switch-width: 52px;
   $switch-padding: 2px;

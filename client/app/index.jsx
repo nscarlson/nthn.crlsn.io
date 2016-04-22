@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { hashHistory, Router, Route } from 'react-router';
+import { hashHistory, Router, Route, IndexRoute} from 'react-router';
 
 import { ArticleList }from 'app/components/ArticleList';
 
@@ -15,8 +15,23 @@ import { Resume }     from 'app/views/Resume';
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <Route path="/test" component={ArticleList} />
+
+      {
+        /*
+          <IndexRoute> for default component
+        */
+      }
+
+      <IndexRoute component={Home}/>
+
+      <Route path="/blog" component={Blog}>
+        <IndexRoute component={ArticleList}/>
+        <Route path="/blog/:blogtitle" component={Blog}/>
+      </Route>
+
+      <Route path="/resume" component={Resume}/>
+
     </Route>
-  </Router>), document.body
+  </Router>), document.getElementById("app")
 )
 //ReactDOM.render(<Footer/>, document.getElementById('app') || document.body);
