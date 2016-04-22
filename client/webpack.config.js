@@ -11,14 +11,14 @@ const pkg = require('./package.json');
 
 const sassLoaders = [
   'css-loader',
-  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, 'app/style')
+  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, 'app')
 ]
 
 const TARGET = process.env.npm_lifecycle_event;
 
 module.exports = {
   entry: {
-      'main': 'app/main',
+      'app': 'app/index',
       'style': 'app/style/application.scss'
   },
   output: {
