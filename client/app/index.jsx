@@ -16,12 +16,6 @@ render((
   <Router history={hashHistory}>
     <Route path="/" component={App}>
 
-      {
-        /*
-          <IndexRoute> for default component
-        */
-      }
-
       <IndexRoute component={Home}/>
 
       <Route path="/blog" component={Blog}>
@@ -32,6 +26,5 @@ render((
       <Route path="/resume" component={Resume}/>
 
     </Route>
-  </Router>), document.getElementById("app")
-)
-//ReactDOM.render(<Footer/>, document.getElementById('app') || document.body);
+  </Router>
+), document.getElementById("app"))

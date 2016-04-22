@@ -1,19 +1,13 @@
+/* eslint react/prop-types: 0 */
+
 import React from 'react';
 
-import {IndexLink, Link} from 'react-router';
-
-import {Home} from 'app/views/Home';
-
-import ArticleList from 'app/components/ArticleList';
+import IndexLink from 'react-router';
 import NavLink from 'app/components/NavLink';
-import NavBar from 'app/components/NavBar';
-
 
 export class App extends React.Component {
-
   constructor(props) {
     super(props);
-
   }
 
   render() {
@@ -25,11 +19,7 @@ export class App extends React.Component {
           <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/resume">Résumé</NavLink>
         </ul>
-        {
-          /*
-          {this.props.children || <Home/>}
-          */
-        }
+        {this.props.children}
       </div>
 
     );
