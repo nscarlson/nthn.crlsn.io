@@ -1,20 +1,7 @@
 var path = require('path');
 
-const merge = require('webpack-merge');
-const webpack = require('webpack');
-const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const pkg = require('./package.json');
-
-const sassLoaders = [
-  'css-loader',
-  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, 'app')
-]
-
-const TARGET = process.env.npm_lifecycle_event;
 
 module.exports = {
   entry: {
@@ -49,7 +36,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'app/templates/index.ejs',
-      title: 'crlsn app',
+      title: 'nthn.crlsn',
       appMountId: ['app'],
       inject: false
     }),

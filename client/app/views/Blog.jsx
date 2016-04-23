@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default React.createClass({
-  render() {
-    return <div>Blog</div>
-  }
-})
+export default class Blog extends React.Component{
+    render() {
+        return (<div>Blogs</div>)
+    }
+}

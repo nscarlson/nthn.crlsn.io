@@ -1,8 +1,6 @@
 import React from 'react';
 import Marked from 'marked';
 
-import { Switch } from 'app/components/switch/switch'
-
 export class ArticleList extends React.Component {
 
   constructor (props) {
@@ -39,13 +37,11 @@ export class ArticleList extends React.Component {
     return (
       <section>
 
-        <Switch />
-
         { this.state.articles.map((article, i) =>
             <article key={i}>
               <h1>{ article.title }</h1>
               <div className="content"
-                dangerouslySetInnerHTML={ this.rawMarkup(article.content) }
+                dangerouslySetInnerHTML={this.rawMarkup(article.content)}
                 key={ i }
               />
             </article>
