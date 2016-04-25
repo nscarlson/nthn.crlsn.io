@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "deploy": "gh-pages -d build",
-    "start": "webpack-dev-server --inline",
+    "start": "webpack-dev-server --inline --content-base build --history-api-fallback",
     "build": "webpack",
     "test": "echo \"No tests specified\""
   },
@@ -27,6 +27,9 @@
     "babel-preset-react": "^6.3.13",
     "clean-webpack-plugin": "^0.1.8",
     "css-loader": "^0.23.1",
+    "eslint": "^2.8.0",
+    "eslint-config-google": "^0.5.0",
+    "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.15.0",
     "html-webpack-template": "^4.0.0",
