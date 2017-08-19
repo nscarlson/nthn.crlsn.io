@@ -1,5 +1,5 @@
 {
-  "name": "crlsn",
+  "name": "nthn.crlsn",
   "version": "0.1.0",
   "description": "Nathan's Personal Website",
   "main": "src/services/server/server.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nscarlson/crlsn.git"
+    "url": "git+https://github.com/nscarlson/nthn.crlsn.git"
   },
   "keywords": [
     "Node",
@@ -24,10 +24,10 @@
     "Redux",
     "isomorphic"
   ],
-  "author": "https://github.com/AmbidextrousHQ",
+  "author": "https://github.com/nscarlson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AmbidextrousHQ/liiist-web/issues"
+    "url": "https://github.com/nscarlson/nthn.crlsn/issues"
   },
   "homepage": "https://nthn.crlsn.io",
   "dependencies": {
@@ -46,7 +46,6 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "history": "^4.6.0",
     "isomorphic-fetch": "^2.2.1",
-    "liiist-config": "git+ssh://git@github.com/AmbidextrousHQ/liiist-config.git#2774faeb73a2b5f185d1d668dfa6aa192cdf222e",
     "node-sass": "^4.5.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
