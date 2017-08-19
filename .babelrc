@@ -1,0 +1,15 @@
+{
+    "compact": false,
+    "env": {
+      "development": {
+        "plugins": [
+            "react-hot-loader/babel"
+        ],
+      }
+    },
+    "presets": [
+        "env",
+        "react",
+        "stage-0"
+    ]
+}
