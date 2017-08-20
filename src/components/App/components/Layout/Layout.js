@@ -1,17 +1,12 @@
 import { node } from 'prop-types'
 import React from 'react'
-import { Switch } from 'react-router-dom'
 
-import Footer from './components/Footer'
 import Header from './components/Header'
 
 const Layout = ({ children }) => (
   <div className="layout">
-    <Switch>
-      <Header />
-    </Switch>
+    <Header />
     {children}
-    <Footer />
   </div>
 )
 

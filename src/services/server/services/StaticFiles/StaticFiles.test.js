@@ -13,7 +13,5 @@ describe('StaticFiles', () => {
     get = req.get
   })
 
-  it('GET /public/favicon.ico', () => get('/public/favicon.ico').expect(200))
-
   it('GET /public/FILE_THAT_DOESNT_EXIST', () => get('/public/FILE_THAT_DOESNT_EXIST').expect(404))
 })

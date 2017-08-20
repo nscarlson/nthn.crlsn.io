@@ -1,7 +1,7 @@
 {
   "name": "nthn.crlsn",
   "version": "0.1.0",
-  "description": "Nathan's Personal Website",
+  "description": "Nathan Personal Website",
   "main": "src/services/server/server.js",
   "scripts": {
     "build": "webpack --progress",
@@ -43,10 +43,8 @@
     "cookie-parser": "^1.4.3",
     "enzyme": "^2.8.2",
     "express": "^4.15.2",
-    "extract-text-webpack-plugin": "^2.1.0",
     "history": "^4.6.0",
     "isomorphic-fetch": "^2.2.1",
-    "liiist-config": "git+ssh://git@github.com/AmbidextrousHQ/liiist-config.git#2774faeb73a2b5f185d1d668dfa6aa192cdf222e",
     "node-sass": "^4.5.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
@@ -60,13 +58,14 @@
     "react-tree-walker": "^2.1.2",
     "redux": "^3.6.0",
     "redux-actions": "^2.0.3",
-    "redux-devtools-extension": "^2.13.2",
     "redux-form": "^6.8.0",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "source-map-support": "^0.4.11"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^2.1.0",
+    "redux-devtools-extension": "^2.13.2",
     "assets-webpack-plugin": "^3.5.1",
     "babel-preset-react-native": "^2.0.0",
     "css-loader": "^0.27.1",

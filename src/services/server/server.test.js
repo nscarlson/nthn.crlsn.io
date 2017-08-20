@@ -1,5 +1,3 @@
-import { WEB_PORT } from 'liiist-config'
-
 jest.mock('./services/HMR')
 jest.mock('./services/Render')
 jest.mock('./services/StaticFiles')
@@ -13,12 +11,12 @@ describe('server', () => {
     init = server.init
   })
 
-  it(`inits the server on port ${WEB_PORT}`, () => {
+  it(`inits the server on port 3000`, () => {
     jest.spyOn(app, 'listen').mockImplementation((port, cb) => cb())
     jest.spyOn(console, 'log').mockImplementation(() => {})
 
     init()
 
-    expect(app.listen).toHaveBeenCalledWith(WEB_PORT, expect.anything())
+    expect(app.listen).toHaveBeenCalledWith(3000, expect.anything())
   })
 })
