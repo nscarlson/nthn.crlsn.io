@@ -1,7 +1,5 @@
 import express from 'express'
 
-import { WEB_PORT } from 'liiist-config'
-
 import HMR from './services/HMR'
 import Render from './services/Render'
 import StaticFiles from './services/StaticFiles'
@@ -12,8 +10,8 @@ app.use(HMR)
 app.use(StaticFiles)
 app.use(Render)
 
-const init = () => app.listen(WEB_PORT, () => {
-  console.log('Listening on port', WEB_PORT)
+const init = () => app.listen(3000, () => {
+  console.log('Listening on port 3000')
 })
 
 export { init }

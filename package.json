@@ -46,6 +46,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "history": "^4.6.0",
     "isomorphic-fetch": "^2.2.1",
+    "liiist-config": "git+ssh://git@github.com/AmbidextrousHQ/liiist-config.git#2774faeb73a2b5f185d1d668dfa6aa192cdf222e",
     "node-sass": "^4.5.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",

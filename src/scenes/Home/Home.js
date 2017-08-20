@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 
+class Home extends Component {
+  static displayName = 'Home'
 
-const img = require('./images/profile.jpg');
-
-const Home = () =>
+  render = () =>
     <div className="home">
-        <p>
-            {'I led a perfectly normal life until I started programming. Now I spend 90% of my time eating or sleeping or sitting in the cheapest available chair or any combination thereof, instead of looking for ants in the backyard.'}
-        </p>
-        <br />
-        <img src={ img } />
-        <br />
+      <p>
+        {'I led a perfectly normal life until I started programming. Now I spend 90% of my time eating or sleeping or sitting in the cheapest available chair or any combination thereof, instead of looking for ants in the backyard.'}
+      </p>
+      <br />
+      <img src="/images/profile.jpg" />
+      <br />
     </div>
-    
+}
+
 export default Home

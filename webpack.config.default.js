@@ -1,4 +1,3 @@
-import CopyWebpackPlugin from 'copy-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import { resolve } from 'path'
 import webpack from 'webpack'
@@ -68,10 +67,6 @@ const config = {
     sourceMapFilename: '[file].map',
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: 'manifest.json', to: '.' },
-      { from: 'assets/**', to: 'assets' },
-    ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     }),

@@ -1,5 +1,3 @@
-import { API1_HOST } from 'liiist-config'
-
 import * as users from './users'
 
 describe('users actions', () => {
@@ -22,7 +20,7 @@ describe('users actions', () => {
 
     await users.getCurrentSession()(dispatch)
 
-    expect(fetch).toHaveBeenCalledWith(`${API1_HOST}/users/me`, {
+    expect(fetch).toHaveBeenCalledWith(`http://api/users/me`, {
       credentials: 'include',
     })
 

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-const Projects = () =>
-  <div>
+class Projects extends Component {
+  static displayName = 'Projects'
+
+  render = () =>
+    <div>
       Projects
-  </div>
+    </div>
+}
 
-export default Projects;
+export default Projects

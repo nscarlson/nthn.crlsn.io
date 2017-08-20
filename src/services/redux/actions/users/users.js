@@ -1,8 +1,6 @@
-import { API1_HOST } from 'liiist-config'
-
 class userApi {
   static async getCurrentSession () {
-    const json = await (await fetch(`${API1_HOST}/users/me`, {
+    const json = await (await fetch(`http://api/users/me`, {
       credentials: 'include',
     })).json()
 
