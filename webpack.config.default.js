@@ -24,7 +24,6 @@ const config = {
       {
         include: [
           resolve('src'),
-          /liiist/,
         ],
         loader: 'babel-loader?cacheDirectory',
         test: /\.js$/,
