@@ -41,12 +41,7 @@ describe('<Head />', () => {
 
         <GoogleAnalytics />
         <ClientStyles />
-        <FacebookLoginHash />
-        <Favicon />
         <Viewport />
-        <WebAppIcon />
-        <WebAppCapable />
-        <WebAppStatusBar />
       </head>
     )).toBe(true)
   })
