@@ -6,3 +6,7 @@ $font-weight-bold: 700;
 
 // import any service-related styles first
 @import "services/services";
+
+// import styles for components and scenes
+@import "components/components";
+@import "scenes/scenes";
