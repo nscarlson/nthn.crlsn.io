@@ -1,12 +1,13 @@
 import express from 'express'
 
-import HMR from './services/HMR'
+// import HMR from './services/HMR'
 import Render from './services/Render'
 import StaticFiles from './services/StaticFiles'
 
 const app = express()
 
-app.use(HMR)
+// TODO: Find out why HRM breaks the build when renaming liiist-web parent directory to anything else 
+// app.use(HMR)
 app.use(StaticFiles)
 app.use(Render)
 
