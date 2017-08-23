@@ -1,0 +1,31 @@
+machine:
+    environment:
+        PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    node:
+        version: 6.1.0
+    services:
+        - docker
+
+dependencies:
+    override:
+        - yarn
+        - docker info
+    cache_directories:
+        - ~/.cache/yarn
+
+test:
+    override:
+        - yarn lint
+        - yarn test-clean -- --runInBand
+        - yarn build-staging
+
+        - docker build --rm=false -t nscarlson/crlsn-frontend .
+
+        - docker run -e NODE_ENV -dp 3000:3000 nscarlson/crlsn-frontend; sleep 10
+        - curl --retry 10 --retry-delay 5 -v http://localhost:3000
+
+deployment:
+    hub:
+        branch: master
+        commands:
+            - docker push nscarlson/crlsn-frontend:latest
