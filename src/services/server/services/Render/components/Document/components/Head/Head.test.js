@@ -3,13 +3,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import ClientStyles from './components/ClientStyles'
-import FacebookLoginHash from './components/FacebookLoginHash'
-import Favicon from './components/Favicon'
 import GoogleAnalytics from './components/GoogleAnalytics'
 import Viewport from './components/Viewport'
-import WebAppCapable from './components/WebAppCapable'
-import WebAppIcon from './components/WebAppIcon'
-import WebAppStatusBar from './components/WebAppStatusBar'
 
 import Head from './Head'
 

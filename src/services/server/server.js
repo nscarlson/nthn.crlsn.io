@@ -6,7 +6,7 @@ import StaticFiles from './services/StaticFiles'
 
 const app = express()
 
-// TODO: Find out why HRM breaks the build when renaming liiist-web parent directory to anything else 
+// TODO: Find out why HRM breaks the build when renaming liiist-web parent directory to anything else
 // app.use(HMR)
 app.use(StaticFiles)
 app.use(Render)
