@@ -1,4 +1,5 @@
 import AssetsPlugin from 'assets-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import FontelloPlugin from 'fontello-webpack-plugin'
 import { resolve } from 'path'
 import webpack from 'webpack'
@@ -23,6 +24,11 @@ const client = {
   },
   plugins: [
     ...config.plugins,
+
+    new CopyWebpackPlugin([
+      // {output}/file.txt
+      { from: 'assets/images/profile.jpg', to: 'images' },
+    ]),
 
     process.env.FONTELLO ? new FontelloPlugin({
       config: fontello,
