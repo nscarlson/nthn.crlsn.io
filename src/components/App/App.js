@@ -11,8 +11,8 @@ class App extends Component {
   render = () => (
     <Layout>
       <Switch>
-        <Route component={About} exact path="/about" />
         <Route component={Home} exact path="/" />
+        <Route component={About} exact path="/about" />
       </Switch>
     </Layout>
   )
