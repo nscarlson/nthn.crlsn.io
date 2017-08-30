@@ -1,12 +1,12 @@
-import React from 'react';
-import Marked from 'marked';
+import React from 'react'
+import Marked from 'marked'
 
 export class ArticleList extends React.Component {
 
   constructor (props) {
-    super(props);
+    super(props)
 
-    this.rawMarkup.bind(this);
+    this.rawMarkup.bind(this)
 
     /**
     * Test markdown data
