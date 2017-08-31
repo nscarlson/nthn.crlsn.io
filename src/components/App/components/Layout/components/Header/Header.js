@@ -5,10 +5,10 @@ class Header extends Component {
   displayName = 'Header'
 
   render = () =>
-    <header className="centered-navigation" role="banner">
-      <div className="centered-navigation-wrapper">
+    <header role="banner">
+      <div className="nav-wrapper">
         <nav role="navigation">
-          <ul className="centered-navigation-menu show" id="js-centered-navigation-menu">
+          <ul className="centered-navigation-menu show" id="nav-menu">
             <li className="nav-link"><Link to="/">NTHN</Link></li>
             <li className="nav-link"><Link to="/resume">Résumé</Link></li>
             <li className="nav-link"><Link to="/contact">Contact</Link></li>

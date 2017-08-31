@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Resume = () => <div> Resume </div>
+const Resume = () => (
+  <div>Resume</div>
+)
 
 Resume.displayName = 'Resume'
 
