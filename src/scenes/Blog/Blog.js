@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Blog = () => <div>Blogs</div>
+import Article from 'components/article'
+
+const Blog = () => <div>
+    <Article />
+</div>
+
 
 Blog.displayName = 'Blog'
 
