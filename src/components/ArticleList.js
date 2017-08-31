@@ -2,6 +2,7 @@ import React from 'react'
 import Marked from 'marked'
 
 export class ArticleList extends React.Component {
+  displayName = 'ArticleList'
 
   constructor (props) {
     super(props)
@@ -30,7 +31,7 @@ export class ArticleList extends React.Component {
     return { __html: Marked(content, { sanitize: true }) }
   }
 
-  render() {
+  render () {
     const article = {
       content: `# H1 test\n## H2 test`,
       title: 'Article Title',
@@ -41,7 +42,8 @@ export class ArticleList extends React.Component {
         { this.state.articles.map((article, i) =>
           <article key={i}>
             <h1>{ article.title }</h1>
-            <div className="content"
+            <div
+              className="content"
               dangerouslySetInnerHTML={this.rawMarkup(article.content)}
               key={i}
             />
