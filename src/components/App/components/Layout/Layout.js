@@ -3,6 +3,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 const Layout = ({ children }) => (
   <div className="layout">
@@ -10,6 +11,7 @@ const Layout = ({ children }) => (
       <Header />
     </Switch>
     {children}
+    <Footer />
   </div>
 )
 
