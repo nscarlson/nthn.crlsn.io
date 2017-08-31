@@ -69,7 +69,7 @@
     "babel-preset-react-native": "^2.0.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.27.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.5.0",
     "eslint-config-ambidextrous": "^1.1.6",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-react": "^5.0.0",
