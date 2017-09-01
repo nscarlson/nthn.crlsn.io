@@ -1,6 +1,5 @@
 jest.mock('webpack')
 jest.mock('webpack-dev-middleware')
-jest.mock('webpack-hot-middleware')
 
 jest.mock('../../../../../webpack.config.client')
 
@@ -18,11 +17,9 @@ describe('HMR', () => {
 
     const webpack = require('webpack')
     const webpackDevMiddleware = require('webpack-dev-middleware')
-    const webpackHotMiddleware = require('webpack-hot-middleware')
 
     expect(webpack).toHaveBeenCalled()
     expect(webpackDevMiddleware).toHaveBeenCalled()
-    expect(webpackHotMiddleware).toHaveBeenCalled()
 
     process.env.NODE_ENV = NODE_ENV
   })
@@ -36,11 +33,9 @@ describe('HMR', () => {
 
     const webpack = require('webpack')
     const webpackDevMiddleware = require('webpack-dev-middleware')
-    const webpackHotMiddleware = require('webpack-hot-middleware')
 
     expect(webpack).not.toHaveBeenCalled()
     expect(webpackDevMiddleware).not.toHaveBeenCalled()
-    expect(webpackHotMiddleware).not.toHaveBeenCalled()
 
     process.env.NODE_ENV = NODE_ENV
   })

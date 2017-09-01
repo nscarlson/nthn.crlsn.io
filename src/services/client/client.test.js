@@ -24,24 +24,6 @@ describe('client', () => {
       expect(document.getElementById).toHaveBeenCalledWith('initial-state')
     })
 
-    it('supports hot reloading', () => {
-      const { NODE_ENV } = process.env
-
-      process.env.NODE_ENV = 'development'
-
-      m.hot = {
-        accept: jest.fn((m, fn) => {
-          fn()
-        }),
-      }
-
-      init()
-
-      expect(m.hot.accept).toHaveBeenCalledWith('components/App', expect.anything())
-
-      process.env.NODE_ENV = NODE_ENV
-    })
-
     it('removes the initial-state container if it exists', () => {
       const initialState = {
         parentElement: {

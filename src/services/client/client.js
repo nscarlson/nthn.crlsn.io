@@ -1,7 +1,6 @@
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
 import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter } from 'react-router-dom'
 
 import App from 'components/App'
@@ -13,13 +12,11 @@ const init = () => {
 
   const doRender = (App) => {
     render(
-      <AppContainer>
-        <BrowserRouter>
-          <ApolloProvider client={apollo} store={store}>
-            <App />
-          </ApolloProvider>
-        </BrowserRouter>
-      </AppContainer>,
+      <BrowserRouter>
+        <ApolloProvider client={apollo} store={store}>
+          <App />
+        </ApolloProvider>
+      </BrowserRouter>,
       document.getElementById('app'),
       () => {
         const initialState = document.getElementById('initial-state')
@@ -29,12 +26,6 @@ const init = () => {
         }
       }
     )
-  }
-
-  if (process.env.NODE_ENV === 'development' && module.hot) {
-    module.hot.accept('components/App', () => {
-      doRender(require('components/App').default)
-    })
   }
 
   doRender(App)

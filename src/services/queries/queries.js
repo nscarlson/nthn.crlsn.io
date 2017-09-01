@@ -1,2 +1,1 @@
-export { default as book } from './book'
-export { default as bookSearch } from './bookSearch'
+export { default as article } from './article'
