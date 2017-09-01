@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-<div className="tag">
-  hi
-</div>
+const Tag = () => (
+  <div className="tag">
+    TAG
+  </div>
+)
 
-export default Tag;
+Tag.displayName = 'Tag'
+
+export default Tag
