@@ -4,7 +4,7 @@ import Article from 'components/Article'
 const BlogPosts = [0, 1, 2]
 
 const articles = BlogPosts.map((id) =>
-  <Article id={id} />
+  <Article key={id} />
 )
 
 const Blog = () => (
