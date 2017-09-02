@@ -2,10 +2,10 @@ import { gql } from 'react-apollo'
 
 const article = gql`
   query article($id: ID!) {
-    article(id: $id) {
+    Article(id: $id) {
       id
       content
-      tags
+      # tags
       title
     }
   }

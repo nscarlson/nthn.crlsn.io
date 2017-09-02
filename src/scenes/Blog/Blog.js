@@ -1,18 +1,20 @@
+import { object } from 'prop-types'
 import React from 'react'
-import Article from 'components/Article'
+// import Article from 'components/Article'
 
-const BlogPosts = [0, 1, 2]
+// const BlogPosts = [0, 1, 2]
 
-const articles = BlogPosts.map((id) =>
-  <Article key={id} />
-)
-
-const Blog = () => (
+const Blog = ({ data: { article }, match: { params: { id } } }) => (
   <div>
-    {articles}
+    <p>{ id }</p>
   </div>
 )
 
 Blog.displayName = 'Blog'
+
+Blog.propTypes = {
+  data: object.isRequired,
+  match: object.isRequired,
+}
 
 export default Blog
