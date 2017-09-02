@@ -3,8 +3,10 @@ import React from 'react'
 
 import Tag from 'components/Tag'
 
-const getMarkdownText = () => {
-  var rawMarkup = marked('This is _Markdown_.', { sanitize: true })
+const getAscii = (b64) => Buffer.from(b64, 'base64').toString()
+
+const getMarkdownText = (md) => {
+  var rawMarkup = marked(md, { sanitize: true })
   return { __html: rawMarkup }
 }
 
@@ -13,10 +15,10 @@ const Article = () => (
     <div>
       <article>
         <h1>{ 'Article Title' }</h1>
-        <div dangerouslySetInnerHTML={getMarkdownText()} />
+        <div dangerouslySetInnerHTML={getMarkdownText(getAscii('SGVsbG8gV29ybGQ='))} />
       </article>
     </div>
-    <Tag />
+    <Tag name="tag" />
   </section>
  )
 
