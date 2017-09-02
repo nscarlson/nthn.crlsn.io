@@ -12,7 +12,7 @@ class Article extends Component {
   }
 
   render = () => (
-    <div id="articles-container">
+    <section className="article">
       <div>
         <article>
           <h1>{ 'Article Title' }</h1>
@@ -20,7 +20,7 @@ class Article extends Component {
         </article>
       </div>
       <Tag />
-    </div>
+    </section>
   )
 }
 

@@ -24,7 +24,7 @@ Render.use(async (req, res) => {
         <App />
       </ApolloProvider>
     </StaticRouter>
-    )
+  )
 
   try {
     await resolveDependencies(components)
@@ -37,7 +37,7 @@ Render.use(async (req, res) => {
     <Document initialState={store.getState()}>
       {renderToString(components)}
     </Document>
-    )
+  )
 
   if (context.url) {
     return res.redirect(context.url)
