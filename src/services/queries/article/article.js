@@ -1,9 +1,9 @@
 import { gql } from 'react-apollo'
 
 const article = gql`
-  query article($id: String) {
-    article(_id: $id) {
-      _id
+  query article($id: ID!) {
+    article(id: $id) {
+      id
       content
       tags
       title
