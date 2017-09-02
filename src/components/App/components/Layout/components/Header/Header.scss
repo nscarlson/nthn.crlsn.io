@@ -3,14 +3,10 @@ header {
   width: 100%;
   height: 76px;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
 }
 
 nav {
   float: left;
-  padding: 20px;	
 }
 
 .current {
@@ -20,5 +16,5 @@ nav {
 li {
   display: inline-block;
   float: left;
-  padding: 10px
+  padding-right: 20px
 }
