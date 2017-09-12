@@ -24,6 +24,7 @@ const config = {
       {
         include: [
           resolve('src'),
+          resolve('./'),
         ],
         loader: 'babel-loader?cacheDirectory',
         test: /\.js$/,
