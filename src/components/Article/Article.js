@@ -1,28 +1,32 @@
-import React, { Component } from 'react'
+import marked from 'marked'
+import { object } from 'prop-types'
+import React from 'react'
 
-import Marked from 'marked'
 import Tag from 'components/Tag'
 
-class Article extends Component {
-  displayName = 'Article'
+const getAscii = (b64) => Buffer.from(b64, 'base64').toString()
 
-  rawMarkup = (content) => {
-    __html: Marked(content, { sanitize: true })
-  }
+const getMarkdownText = (md) => {
+  var rawMarkup = marked(md, { sanitize: true })
+  return { __html: rawMarkup }
+}
 
-  render = () =>
-    <div id="articles-container">
-      <div>
-        <article>
-          <h1>{ 'Article Title' }</h1>
-          <div
-            className="content"
-            dangerouslySetInnerHTML={this.rawMarkup('\n\n-------------\n\nParagraphs are separated by a blank line.\n\n2nd paragraph. *Italic*, **bold**, and `monospace`.')}
-          />
-        </article>
-      </div>
-      <Tag />
+const Article = ({ data }) => (
+  <section className="article">
+    <div>
+      <article>
+        <h1>{ 'Article Title' }</h1>
+        <div dangerouslySetInnerHTML={getMarkdownText(getAscii('SGVsbG8gV29ybGQ='))} />
+      </article>
     </div>
+    <Tag name="tag" />
+  </section>
+ )
+
+Article.displayName = 'Article'
+
+Article.propTypes = {
+  data: object,
 }
 
 export default Article

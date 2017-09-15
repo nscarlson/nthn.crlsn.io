@@ -21,7 +21,7 @@ describe('Render', () => {
   })
 
   it('renders the html when all is well', async () => {
-        // jest.mock('./services/resolveDependencies')
+    // jest.mock('./services/resolveDependencies')
 
     const resolveDependencies = require('./services/resolveDependencies')
     resolveDependencies.default.mockImplementationOnce(() => Promise.resolve())

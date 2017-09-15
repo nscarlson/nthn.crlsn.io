@@ -1,7 +1,17 @@
-import React, { Component } from 'react'
+import { string } from 'prop-types'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-<div className="tag">
-  hi
-</div>
+const Tag = ({ name }) => (
+  <span className="tag">
+    <Link to={`/tag/${name}`}>{name}</Link>
+  </span>
+)
 
-export default Tag;
+Tag.displayName = 'Tag'
+
+Tag.propTypes = {
+  name: string,
+}
+
+export default Tag

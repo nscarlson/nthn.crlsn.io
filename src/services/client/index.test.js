@@ -1,4 +1,5 @@
 jest.mock('babel-polyfill')
+jest.mock('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', () => {}, { virtual: true })
 jest.mock('index.scss', () => {})
 jest.mock('./client')
 
