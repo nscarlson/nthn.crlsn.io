@@ -1,6 +1,6 @@
 import { gql } from 'react-apollo'
 
-const articles = gql`
+const allArticles = gql`
   query getArticles {
     allArticles {
       id
@@ -9,4 +9,4 @@ const articles = gql`
   }
 `
 
-export default articles
+export default allArticles

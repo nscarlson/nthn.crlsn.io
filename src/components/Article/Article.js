@@ -1,4 +1,5 @@
 import marked from 'marked'
+import { object } from 'prop-types'
 import React from 'react'
 
 import Tag from 'components/Tag'
@@ -10,7 +11,7 @@ const getMarkdownText = (md) => {
   return { __html: rawMarkup }
 }
 
-const Article = () => (
+const Article = ({ data }) => (
   <section className="article">
     <div>
       <article>
@@ -23,5 +24,9 @@ const Article = () => (
  )
 
 Article.displayName = 'Article'
+
+Article.propTypes = {
+  data: object,
+}
 
 export default Article
