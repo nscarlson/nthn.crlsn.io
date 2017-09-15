@@ -1,5 +1,5 @@
 import marked from 'marked'
-import { object } from 'prop-types'
+import { string } from 'prop-types'
 import React from 'react'
 
 import Tag from 'components/Tag'
@@ -11,12 +11,12 @@ const getMarkdownText = (md) => {
   return { __html: rawMarkup }
 }
 
-const Article = ({ data }) => (
+const Article = (props) => (
   <section className="article">
     <div>
       <article>
         <h1>{ 'Article Title' }</h1>
-        <div dangerouslySetInnerHTML={getMarkdownText(getAscii('SGVsbG8gV29ybGQ='))} />
+        <div dangerouslySetInnerHTML={getMarkdownText(getAscii(props.content))} />
       </article>
     </div>
     <Tag name="tag" />
@@ -26,7 +26,7 @@ const Article = ({ data }) => (
 Article.displayName = 'Article'
 
 Article.propTypes = {
-  data: object,
+  content: string,
 }
 
 export default Article
