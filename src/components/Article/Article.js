@@ -15,7 +15,6 @@ const Article = (props) => (
   <section className="article">
     <div>
       <article>
-        <h1>{ 'Article Title' }</h1>
         <div dangerouslySetInnerHTML={getMarkdownText(getAscii(props.content))} />
       </article>
     </div>
