@@ -4,7 +4,7 @@ import { allArticles } from 'services/queries'
 
 import Blog from './Blog'
 
-const BlogContainer = graphql(allArticles, { data: 'articles' })(Blog)
+const BlogContainer = graphql(allArticles)(Blog)
 
 BlogContainer.displayName = 'BlogContainer'
 
