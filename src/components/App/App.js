@@ -5,7 +5,7 @@ import Layout from './components/Layout'
 import About from 'scenes/About'
 import Blog from 'scenes/Blog'
 import Home from 'scenes/Home'
-import Resume from 'scenes/Resume'
+import Projects from 'scenes/Projects'
 
 const App = () => (
   <Layout>
@@ -13,7 +13,7 @@ const App = () => (
       <Route component={Home} exact path="/" />
       <Route component={About} exact path="/about" />
       <Route component={Blog} exact path="/blog" />
-      <Route component={Resume} exact path="/resume" />
+      <Route component={Projects} exact path="/projects" />
     </Switch>
   </Layout>
 )

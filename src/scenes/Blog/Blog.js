@@ -10,9 +10,9 @@ class Blog extends Component {
     data: object,
   }
 
-  render () {
+  render = () => {
     if (this.props.data.loading) {
-      return (<ReactLoading type="bars" color="black" height="667" width="375" />)
+      return (<ReactLoading type="bars" color="black" height={667} width={375} />)
     }
     return (
       <div>
