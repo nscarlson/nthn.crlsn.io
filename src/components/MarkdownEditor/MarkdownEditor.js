@@ -42,7 +42,9 @@ the inspiration to this, and some handy implementation hints, came.
 const MarkdownEditor = () => (
   <div>
     <div id="in">
-      <form><textarea defaultValue={text} id="code" /></form></div>
+      <form>
+        <textarea defaultValue={text} id="code" />
+      </form></div>
     <div id="out" />
   </div>
 )
