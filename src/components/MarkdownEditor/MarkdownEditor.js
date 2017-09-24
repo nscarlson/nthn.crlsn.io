@@ -1,6 +1,24 @@
-import React from 'react'
+import { string } from 'prop-types'
+import Highlight from 'services/highlight'
+import React, { Component } from 'react'
 
-const text = `# (GitHub-Flavored) Markdown Editor
+class MarkdownEditor extends Component {
+  displayName = 'MarkdownEditor'
+
+  static propTypes = {
+    text: string,
+  }
+
+  constructor (props) {
+    super(props)
+    this.state = { isMounted: false }
+  }
+
+  componentDidMount () {
+    this.setState({ isMounted: true })
+  }
+
+  text = `# (GitHub-Flavored) Markdown Editor
 
 Basic useful feature list:
 
@@ -39,16 +57,16 @@ the inspiration to this, and some handy implementation hints, came.
  * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
  * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs`
 
-const MarkdownEditor = () => (
-  <div>
-    <div id="in">
-      <form>
-        <textarea defaultValue={text} id="code" />
-      </form></div>
-    <div id="out" />
-  </div>
-)
-
-MarkdownEditor.displayName = 'MarkdownEditor'
+  render = () => (
+    <div>
+      <div id="in">
+        <form>
+          {this.state.isMounted && <Highlight className="markdown" text={this.text} />}
+        </form>
+      </div>
+      <div id="out" />
+    </div>
+  )
+}
 
 export default MarkdownEditor
