@@ -5,20 +5,9 @@ import React, { Component } from 'react'
 class MarkdownEditor extends Component {
   displayName = 'MarkdownEditor'
 
-  static propTypes = {
-    text: string,
-  }
-
   constructor (props) {
     super(props)
-    this.state = { isMounted: false }
-  }
-
-  componentDidMount () {
-    this.setState({ isMounted: true })
-  }
-
-  text = `# (GitHub-Flavored) Markdown Editor
+    this.state = { isMounted: false, text: `# (GitHub-Flavored) Markdown Editor
 
 Basic useful feature list:
 
@@ -55,13 +44,27 @@ the inspiration to this, and some handy implementation hints, came.
  * [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
  * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
  * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs`
+ * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs`,
+    }
+  }
+
+  componentDidMount () {
+    this.setState({ isMounted: true })
+  }
+
+  handleChange = (e) => {
+    this.setState({ text: e.target.value })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+  }
 
   render = () => (
     <div>
       <div id="in">
         <form>
-          {this.state.isMounted && <Highlight className="markdown" text={this.text} />}
+          {this.state.isMounted && <Highlight className="markdown" text={this.state.text} />}
         </form>
       </div>
       <div id="out" />
