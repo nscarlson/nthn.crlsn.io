@@ -1,4 +1,4 @@
-import { string } from 'prop-types'
+import CodeMirror from 'react-codemirror'
 import Highlight from 'services/highlight'
 import React, { Component } from 'react'
 
@@ -63,11 +63,10 @@ the inspiration to this, and some handy implementation hints, came.
   render = () => (
     <div>
       <div id="in">
-        <form>
-          {this.state.isMounted && <Highlight className="markdown" text={this.state.text} />}
-        </form>
+        {this.state.isMounted && <CodeMirror value={this.state.text} />}
       </div>
-      <div id="out" />
+      <div id="out">{this.state.isMounted && <Highlight className="markdown" text={this.state.text} />}</div>
+
     </div>
   )
 }
