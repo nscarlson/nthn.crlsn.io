@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Article from 'components/Article'
+
 let CodeMirror
 let Highlight
 
@@ -72,7 +74,8 @@ the inspiration to this, and some handy implementation hints, came.
             <CodeMirror onChange={this.handleUpdateText} preserveScrollPosition={false} value={this.state.text} />
           </div>
           <div id="out">
-            <Highlight className="markdown" onChange={this.handleUpdateText} text={this.state.text} />
+
+            <Article ascii content={this.state.text} title="test" />
           </div>
         </div>
       )

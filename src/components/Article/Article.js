@@ -1,5 +1,5 @@
 import marked from 'marked'
-import { string } from 'prop-types'
+import { string, bool } from 'prop-types'
 import React from 'react'
 
 import Tag from 'components/Tag'
@@ -15,7 +15,7 @@ const Article = (props) => (
   <section className="article">
     <div>
       <article>
-        <div dangerouslySetInnerHTML={getMarkdownText(getAscii(props.content))} />
+        <div dangerouslySetInnerHTML={getMarkdownText((props.ascii === true ? props.content : getAscii(props.content)))} />
       </article>
     </div>
     <Tag name="tag" />
@@ -26,6 +26,7 @@ Article.displayName = 'Article'
 
 Article.propTypes = {
   content: string,
+  ascii: bool,
 }
 
 export default Article
