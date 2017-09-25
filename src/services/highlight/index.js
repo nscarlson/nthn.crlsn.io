@@ -1,1 +1,1 @@
-export default from './highlight'
+export default from './Highlight'

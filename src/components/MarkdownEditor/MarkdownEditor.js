@@ -1,6 +1,7 @@
-import CodeMirror from 'react-codemirror'
-import Highlight from 'services/highlight'
 import React, { Component } from 'react'
+
+let CodeMirror
+let Highlight
 
 class MarkdownEditor extends Component {
   displayName = 'MarkdownEditor'
@@ -50,6 +51,8 @@ the inspiration to this, and some handy implementation hints, came.
 
   componentDidMount () {
     this.setState({ isMounted: true })
+    CodeMirror = require('react-codemirror')
+    Highlight = require('services/Highlight').default
   }
 
   handleChange = (e) => {
@@ -60,15 +63,22 @@ the inspiration to this, and some handy implementation hints, came.
     e.preventDefault()
   }
 
-  render = () => (
-    <div>
-      <div id="in">
-        {this.state.isMounted && <CodeMirror value={this.state.text} />}
-      </div>
-      <div id="out">{this.state.isMounted && <Highlight className="markdown" text={this.state.text} />}</div>
-
-    </div>
-  )
+  render = () => {
+    if (CodeMirror && Highlight) {
+      return (
+        <div>
+          <div id="in">
+            <CodeMirror onChange={this.handleChange} preserveScrollPosition={false} value={this.state.text} />
+          </div>
+          <div id="out">
+            <Highlight className="markdown" text={this.state.text} />
+          </div>
+        </div>
+      )
+    } else {
+      return null
+    }
+  }
 }
 
 export default MarkdownEditor
