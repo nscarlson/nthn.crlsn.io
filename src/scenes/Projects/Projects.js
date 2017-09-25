@@ -1,6 +1,7 @@
 import { object } from 'prop-types'
 import React, { Component } from 'react'
 import ReactLoading from 'react-loading'
+import { Link } from 'react-router-dom'
 
 class Projects extends Component {
   static displayName = 'Projects'
@@ -15,12 +16,10 @@ class Projects extends Component {
     }
     return (
       <div>
-        {this.props.data.allProjects.map(({ id, title, image, article }) => (
-          <div key={id}>
-            <p>{article.title}</p>
+        {this.props.data.allProjects.map(({ article, id, image, title, slug }) => (
+          <Link className="project" key={id} to={article.slug}>
             <img className="project-thumbnail" src={image} />
-          </div>
-       ))}
+          </Link>))}
       </div>
     )
   }
