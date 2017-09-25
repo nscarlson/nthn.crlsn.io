@@ -55,8 +55,9 @@ the inspiration to this, and some handy implementation hints, came.
     Highlight = require('services/Highlight').default
   }
 
-  handleChange = (e) => {
-    this.setState({ text: e.target.value })
+  handleUpdateText = (text) => {
+    this.setState({ text: text })
+    console.log(this.state.text)
   }
 
   handleSubmit = (e) => {
@@ -68,10 +69,10 @@ the inspiration to this, and some handy implementation hints, came.
       return (
         <div>
           <div id="in">
-            <CodeMirror onChange={this.handleChange} preserveScrollPosition={false} value={this.state.text} />
+            <CodeMirror onChange={this.handleUpdateText} preserveScrollPosition={false} value={this.state.text} />
           </div>
           <div id="out">
-            <Highlight className="markdown" text={this.state.text} />
+            <Highlight className="markdown" onChange={this.handleUpdateText} text={this.state.text} />
           </div>
         </div>
       )
