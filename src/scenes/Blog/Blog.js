@@ -10,15 +10,17 @@ class Blog extends Component {
     data: object,
   }
 
-  render () {
+  render = () => {
     if (this.props.data.loading) {
-      return (<ReactLoading type="bars" color="black" height="667" width="375" />)
+      return (<ReactLoading type="bars" color="black" height={667} width={375} />)
     }
     return (
       <div>
-        <p>{'Blog Post'}</p>
-        {this.props.data.allArticles.map(({ id, title, content }) => (
-          <Article content={content} id={id} key={id} title={title} />
+        {this.props.data.allArticles.map(({ id, content, title }) => (
+          <div key={id}>
+            <p>{title}</p>
+            <Article content={content} id={id} />
+          </div>
        ))}
       </div>
     )

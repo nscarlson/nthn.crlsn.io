@@ -3,6 +3,19 @@ import React, { Component } from 'react'
 class About extends Component {
   static displayName = 'About'
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      email: 'email@email.com',
+    }
+  }
+
+  componentDidMount () {
+    this.setState({
+      email: 'nathan.s.carlson@gmail.com',
+    })
+  }
+
   render = () =>
     <div className="content">
       <center>
@@ -16,7 +29,10 @@ class About extends Component {
       </p>
       <p>
         <i aria-hidden="true" className="fa fa-envelope-o" />
-        <a href="mailto:email@email.com">{'email@email.com'}</a>
+        {
+          this.state.email ? <a href={`mailto:${this.state.email}`}>{this.state.email}</a>
+          : <a href="mailto:email@email.com">{'email@email.com'}</a>
+        }
         <br />
         <i aria-hidden="true" className="fa fa-instagram" />
         <a href="https://instagram.com/mrnathancarlson">mrnathancarlson</a>

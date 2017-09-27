@@ -5,6 +5,7 @@ const allArticles = gql`
     allArticles {
       id
       content
+      title
     }
   }
 `
