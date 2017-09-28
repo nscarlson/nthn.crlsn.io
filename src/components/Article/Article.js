@@ -15,7 +15,13 @@ const Article = (props) => (
   <section className="article">
     <div>
       <article>
-        <div dangerouslySetInnerHTML={getMarkdownText((props.ascii === true ? props.content : getAscii(props.content)))} />
+        <div
+          dangerouslySetInnerHTML={
+            getMarkdownText((
+              props.ascii === true ? props.content : getAscii(props.content)
+            ))
+          }
+        />
       </article>
     </div>
     <Tag name="tag" />
@@ -25,8 +31,8 @@ const Article = (props) => (
 Article.displayName = 'Article'
 
 Article.propTypes = {
-  content: string,
   ascii: bool,
+  content: string,
 }
 
 export default Article
