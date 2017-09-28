@@ -69,9 +69,16 @@ the inspiration to this, and some handy implementation hints, came.
   render = () => {
     if (CodeMirror && Highlight) {
       return (
-        <div>
+        <div id="editor-flex">
           <div id="in">
-            <CodeMirror onChange={this.handleUpdateText} preserveScrollPosition={false} value={this.state.text} />
+            <CodeMirror
+              onChange={this.handleUpdateText}
+              options={{
+                lineWrapping: true,
+              }}
+              preserveScrollPosition={false}
+              value={this.state.text}
+            />
           </div>
           <div id="out">
 
