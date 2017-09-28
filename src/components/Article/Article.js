@@ -18,7 +18,7 @@ const Article = (props) => (
         <div
           dangerouslySetInnerHTML={
             getMarkdownText((
-              props.ascii === true ? props.content : getAscii(props.content)
+              getAscii(props.content)
             ))
           }
         />
