@@ -1,3 +1,4 @@
+import marked from 'marked'
 import React, { Component } from 'react'
 
 import Article from 'components/Article'
@@ -51,6 +52,11 @@ the inspiration to this, and some handy implementation hints, came.
     }
   }
 
+  getMarkdownText = (md) => {
+    var rawMarkup = marked(md, { sanitize: true })
+    return { __html: rawMarkup }
+  }
+
   componentDidMount () {
     this.setState({ isMounted: true })
     CodeMirror = require('react-codemirror')
@@ -69,14 +75,25 @@ the inspiration to this, and some handy implementation hints, came.
   render = () => {
     if (CodeMirror && Highlight) {
       return (
-        <div>
+        <div id="editor-flex">
           <div id="in">
-            <CodeMirror onChange={this.handleUpdateText} preserveScrollPosition={false} value={this.state.text} />
+            <CodeMirror
+              onChange={this.handleUpdateText}
+              options={{
+                lineWrapping: true,
+              }}
+              preserveScrollPosition={false}
+              value={this.state.text}
+            />
           </div>
-          <div id="out">
-
-            <Article ascii content={this.state.text} title="test" />
-          </div>
+          <div
+            dangerouslySetInnerHTML={
+              this.getMarkdownText(
+                this.state.text
+              )
+            }
+            id="out"
+          />
         </div>
       )
     } else {
