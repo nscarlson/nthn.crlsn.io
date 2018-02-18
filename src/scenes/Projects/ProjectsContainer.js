@@ -1,10 +1,18 @@
-import { graphql } from 'react-apollo'
+import { graphql, compose } from 'react-apollo'
 
-import { allProjects } from 'services/queries/projects'
+import { projectsQuery } from 'services/graphql'
 
 import Projects from './Projects'
 
-const ProjectsContainer = graphql(allProjects)(Projects)
+const ProjectsContainer = compose(
+    graphql(projectsQuery, {
+        props: ({ data, ...props }) => ({
+            articles: data.allArticles,
+            ...props,
+        }),
+    },
+)(Projects)
+)
 
 ProjectsContainer.displayName = 'ProjectsContainer'
 

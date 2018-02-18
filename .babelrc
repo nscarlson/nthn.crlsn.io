@@ -1,8 +1,5 @@
 {
     "compact": false,
-    "env": {
-      "development": {}
-    },
     "presets": [
         "env",
         "react",

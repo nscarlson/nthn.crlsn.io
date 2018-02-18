@@ -1,10 +1,18 @@
-import { graphql } from 'react-apollo'
+import { graphql, compose } from 'react-apollo'
 
-import { allArticles } from 'services/queries'
+import { articlesQuery } from 'services/graphql'
 
 import Blog from './Blog'
 
-const BlogContainer = graphql(allArticles)(Blog)
+const BlogContainer = compose(
+    graphql(articlesQuery, {
+        props: ({ data, ...props }) => ({
+            articles: data.allArticles,
+            ...props,
+        }),
+    },
+)(Blog)
+)
 
 BlogContainer.displayName = 'BlogContainer'
 

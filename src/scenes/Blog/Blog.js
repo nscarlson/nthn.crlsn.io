@@ -1,31 +1,23 @@
-import { object } from 'prop-types'
-import React, { Component } from 'react'
+import { array } from 'prop-types'
+import React from 'react'
 import Article from 'components/Article'
-import ReactLoading from 'react-loading'
 
-class Blog extends Component {
-  static displayName = 'Blog'
-
-  static propTypes = {
-    data: object,
-  }
-
-  render = () => {
-    if (this.props.data.loading) {
-      return (<ReactLoading type="bars" color="black" height={667} width={375} />)
-    }
-    return (
-      <div>
-        {this.props.data.allArticles.map(({ id, content, title }) => (
-          <div key={id}>
-            <p>{title}</p>
-            <Article content={content} id={id} />
-          </div>
+const Blog = ({ articles }) => (
+    <div>
+        {articles.map(({ id, content, title }) => (
+            <div key={id}>
+                <p>{title}</p>
+                <Article content={content} id={id} />
+            </div>
        ))}
-      </div>
-    )
-  }
+    </div>
+)
+
+Blog.propTypes = {
+    articles: array,
 }
+
+Blog.displayName = 'Blog'
 
 // const Blog = ({ data: { allArticles } }) => {
 //   if (this.props.data.loading) {

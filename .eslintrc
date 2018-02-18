@@ -1,4 +1,4 @@
 extends:
-  ambidextrous
+    crlsn
 globals:
-  fetch: true
+    fetch: true

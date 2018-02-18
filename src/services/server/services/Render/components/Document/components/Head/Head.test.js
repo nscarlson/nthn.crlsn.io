@@ -12,32 +12,31 @@ jest.mock('react-helmet')
 jest.mock('./components/ClientStyles', () => () => null)
 
 describe('<Head />', () => {
-  let props, wrapper
+    let props, wrapper
 
-  beforeEach(() => {
-    props = {
-      children: 'test',
-      initialState: {},
-    }
+    beforeEach(() => {
+        props = {
+            children: 'test',
+        }
 
-    wrapper = shallow(<Head {...props} />)
-  })
+        wrapper = shallow(<Head {...props} />)
+    })
 
-  it('renders the content', () => {
-    const { base, link, meta, script, title } = Helmet.rewind()
+    it('renders the content', () => {
+        const { base, link, meta, script, title } = Helmet.rewind()
 
-    expect(wrapper.contains(
-      <head>
-        {base.toComponent()}
-        {title.toComponent()}
-        {meta.toComponent()}
-        {link.toComponent()}
-        {script.toComponent()}
+        expect(wrapper.contains(
+            <head>
+                {base.toComponent()}
+                {title.toComponent()}
+                {meta.toComponent()}
+                {link.toComponent()}
+                {script.toComponent()}
 
-        <GoogleAnalytics />
-        <ClientStyles />
-        <Viewport />
-      </head>
+                <GoogleAnalytics />
+                <ClientStyles />
+                <Viewport />
+            </head>
     )).toBe(true)
-  })
+    })
 })
