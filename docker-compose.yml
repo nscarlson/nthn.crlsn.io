@@ -1,25 +1,35 @@
-mongo1:
-  hostname: mongo1
-  image: mongo:3.0.6
-  entrypoint: [ "/usr/bin/mongod" ]
-  ports:
-    - "27017:27017"
-  restart: always
+version: '3.6'
+services:
 
-web:
-  hostname: api
-  image: nscarlson/crlsn-api
-  ports:
-    - "3000:3000"
-  links:
-    - mongo1:mongo1
-  restart: always
+  postgres:
+    environment:
+      POSTGRES_USER: crlsn
+      POSTGRES_PASSWORD: nthn_crlsn_io
+      POSTGRES_DB: crlsn
+    image: postgres
+    networks:
+      - internal
 
-nginx:
-  hostname: nginx
-  image: nscarlson/crlsn-nginx
-  links:
-    - web:web
-  ports:
-    - "80:80"
-    - "443:443"
+  web:
+    hostname: api
+    image: nscarlson/crlsn-api
+    ports:
+      - "3000:3000"
+    links:
+      - mongo1:mongo1
+    restart: always
+
+  nginx:
+    image: jwilder/nginx-proxy
+    networks:
+      - external
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: always
+    volumes:
+      - '/etc/nginx/vhost.d'
+      - '/usr/share/nginx/html'
+      - '/var/run/docker.sock:/tmp/docker.sock:ro'
+      - './certs:/etc/nginx/certs'
+      - './packages/nginx/overrides.conf:/etc/nginx/conf.d/overrides.conf'

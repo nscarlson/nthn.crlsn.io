@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  account-portal-web:
+    build:
+      target: development
+    env_file:
+      - ./projects/account-portal-web/.env
+    environment:
+      AUTH_CLIENT_ID: '00000000-0000-0000-0000-000000000000'
+      AUTH_CLIENT_SECRET: 'local-dev-only'
+      AUTH_ENDPOINT: 'https://auth.shapeshift.io.localhost'
+      COOKIE_DOMAIN: '.portal.shapeshift.io.localhost'
+      GRAPHQL_ENDPOINT: 'https://graphql.shapeshift.io.localhost'
+      NODE_EXTRA_CA_CERTS: '/tesseract/certs/certificate-authority.pem'
+      PORT: '443'
+      PORTAL_ENDPOINT: 'https://portal.shapeshift.io.localhost'
+      REDIS_HOST: 'redis'
+      REDIS_PORT: '6379'
+      SESSION_SECRET: 'keyboard cat'
+      VIRTUAL_HOST: 'portal.shapeshift.io.localhost'
+      VIRTUAL_PORT: '443'
+    ports:
+      - '443'
+    restart: always
+  
