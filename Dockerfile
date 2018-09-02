@@ -8,7 +8,7 @@ ENV FORCE_COLOR=1
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV YARN_CACHE_FOLDER /root/.yarn-cache/
 
-WORKDIR /tesseract
+WORKDIR /crlsn
 
 # Copy in yarn offline mirror packages
 COPY ./yarn-offline-mirror ./yarn-offline-mirror

@@ -30,7 +30,6 @@
         "clean": "rm -rf node_modules; rm -rf packages/*/node_modules; rm -rf projects/*/node_modules",
         "commit": "git-cz",
         "dev": "yarn docker:build && docker-compose up --build",
-        "dev:migrate": "docker exec tesseract_shapeshift-auth_1 yarn db:init",
         "docker:build": "./build.sh",
         "docker:dev": "yarn docker:build && yarn docker:run",
         "docker:prune": "docker system prune -af --volumes && docker rmi $(docker images -a -q)",
