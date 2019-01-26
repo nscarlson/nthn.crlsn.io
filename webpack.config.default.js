@@ -30,6 +30,11 @@ const config = {
         test: /\.js$/,
       },
       {
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader',
+        test: /\.(graphql|gql)$/,
+      },
+      {
         test: /\.less$/,
         use: process.env.NODE_ENV === 'development' ? [
           { loader: 'style-loader' },

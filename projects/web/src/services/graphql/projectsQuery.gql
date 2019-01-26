@@ -1,0 +1,10 @@
+query getAllProjects {
+  allProjects {
+    id
+    image
+    article {
+      title
+      slug
+    }
+  }
+}
