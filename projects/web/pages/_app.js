@@ -12,7 +12,7 @@ class MyApp extends App {
                     <link
                         href="/static/images/n.png"
                         rel="icon"
-                        type="image/gif"
+                        type="image/x-icon"
                     />
                 </Head>
                 <Component {...pageProps} />
