@@ -1,5 +1,5 @@
 {
     "alias": "crlsn",
-    "builds": [{ "src": "projects/web/next.config.js", "use": "@now/next" }],
+    "builds": [{ "src": "projects/web/package.json", "use": "@now/next" }],
     "version": 2
 }
