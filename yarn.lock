@@ -6308,6 +6308,13 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
+next-build-id@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/next-build-id/-/next-build-id-2.0.1.tgz#a45f6360e1275f0583b03219f627f79baba7e5bf"
+  integrity sha512-7zbhx7kdOyKHWUEYSEUGb/l6Y+LeJ2dLhTJjY2n1Z09DrgyZwJLspo4xdZFPBz7SyyPvT/8O/cRHn1MuKF9D4Q==
+  dependencies:
+    sywac "^1.2.0"
+
 next@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/next/-/next-7.0.2.tgz#5ff6b3f0e6cf03ce539d5779a55dc1f8fb1759d7"
@@ -8408,6 +8415,11 @@ supports-color@^5.3.0, supports-color@^5.5.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+sywac@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/sywac/-/sywac-1.2.1.tgz#528e482b2f2a18e764ffccc59eb40eea16a7f97d"
+  integrity sha512-bf8agjBAV9mm90k2nWoobe48bO/XugTS86W4dGYTpzVlfFv1cmWsRrQ9hUKIfoDaIRaXIta/BLFINmmxfV+otg==
 
 table@4.0.2:
   version "4.0.2"
