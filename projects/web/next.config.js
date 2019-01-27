@@ -1,10 +1,10 @@
 // next.config.js
+const nextBuildId = require('next-build-id')
+
 module.exports = {
     distDir: 'build',
-    // generateBuildId: async () => {
-    //     return require('child_process')
-    //         .execSync('git rev-parse HEAD')
-    //         .toString()
-    //         .trim()
-    // },
+    generateBuildId: async () => {
+        const fromGit = await nextBuildId({ dir: __dirname })
+        return fromGit.id
+    },
 }
