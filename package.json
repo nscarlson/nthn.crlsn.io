@@ -13,7 +13,6 @@
         "dev:local": "lerna run dev --stream",
         "dev:up": "yarn -s dev:compose up --build --detach",
         "down": "docker-compose down",
-        "sequelize": "yarn --cwd packages/db sequelize",
         "tsc": "tsc"
     },
     "workspaces": [
