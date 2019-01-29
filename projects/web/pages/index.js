@@ -1,20 +1,28 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const StyledAvatar = styled.div`
-    img {
-        border-radius:50%;
+const StyledAvatar = styled.img`
+    border-radius:50%;
+    border-width: 0px;
+    height: auto;
+    width: 324px;
+    position: absolute;
+`
 
-        border-width: 3px;
-        border-style: solid;
-        border-image: linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    }
+const StyledContent = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 `
 
 const Index = () => (
-    <StyledAvatar>
-        <img src="/static/images/avatar.jpg" />
-    </StyledAvatar>
+    <div className="app">
+        <StyledContent>
+                <StyledAvatar src="/static/images/avatar.jpg" />
+        </StyledContent>
+    </div>
 )
 
 export default Index
