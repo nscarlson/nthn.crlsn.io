@@ -12,10 +12,9 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
+     * 1. Correct the line height in all browsers.
+     * 2. Prevent adjustments of font size after orientation changes in iOS.
+     */
     html {
         line-height: 1.15; /* 1 */
         text-size-adjust: 100%; /* 2 */
@@ -25,26 +24,23 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * Remove the margin in all browsers.
- */
-
+     * Remove the margin in all browsers.
+     */
     body {
         margin: 0;
     }
 
     /**
- * Render the main element consistently in IE.
- */
-
+     * Render the main element consistently in IE.
+     */
     main {
         display: block;
     }
 
     /**
- * Correct the font size and margin on h1 elements within section and
- * article contexts in Chrome, Firefox, and Safari.
- */
-
+     * Correct the font size and margin on h1 elements within section and
+     * article contexts in Chrome, Firefox, and Safari.
+     */
     h1 {
         font-size: 2em;
         margin: 0.67em 0;
@@ -54,10 +50,9 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
     hr {
         box-sizing: content-box; /* 1 */
         height: 0; /* 1 */
@@ -65,10 +60,9 @@ const GlobalCssReset = css`
     }
 
     /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd em font sizing in all browsers.
- */
-
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd em font sizing in all browsers.
+     */
     pre {
         font-family: monospace, monospace; /* 1 */
         font-size: 1em; /* 2 */
@@ -78,18 +72,16 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * Remove the gray background on active links in IE 10.
- */
-
+     * Remove the gray background on active links in IE 10.
+     */
     a {
         background-color: transparent;
     }
 
     /**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
     abbr[title] {
         border-bottom: none; /* 1 */
         text-decoration: underline; /* 2 */
@@ -97,19 +89,17 @@ const GlobalCssReset = css`
     }
 
     /**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
     b,
     strong {
         font-weight: bolder;
     }
 
     /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd em font sizing in all browsers.
- */
-
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd em font sizing in all browsers.
+     */
     code,
     kbd,
     samp {
@@ -118,18 +108,16 @@ const GlobalCssReset = css`
     }
 
     /**
- * Add the correct font size in all browsers.
- */
-
+     * Add the correct font size in all browsers.
+     */
     small {
         font-size: 80%;
     }
 
     /**
- * Prevent sub and sup elements from affecting the line height in
- * all browsers.
- */
-
+     * Prevent sub and sup elements from affecting the line height in
+     * all browsers.
+     */
     sub,
     sup {
         font-size: 75%;
@@ -150,9 +138,8 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * Remove the border on images inside links in IE 10.
- */
-
+     * Remove the border on images inside links in IE 10.
+     */
     img {
         border-style: none;
     }
@@ -161,10 +148,9 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
     button,
     input,
     optgroup,
@@ -177,10 +163,9 @@ const GlobalCssReset = css`
     }
 
     /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
+     * 1. Show the overflow in Edge.
+     * Show the overflow in IE.
+     */
     button,
     input {
         /* 1 */
@@ -188,10 +173,9 @@ const GlobalCssReset = css`
     }
 
     /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
     button,
     select {
         /* 1 */
@@ -199,9 +183,8 @@ const GlobalCssReset = css`
     }
 
     /**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
     button,
     [type='button'],
     [type='reset'],
@@ -210,9 +193,8 @@ const GlobalCssReset = css`
     }
 
     /**
- * Remove the inner border and padding in Firefox.
- */
-
+     * Remove the inner border and padding in Firefox.
+     */
     button::-moz-focus-inner,
     [type='button']::-moz-focus-inner,
     [type='reset']::-moz-focus-inner,
@@ -222,9 +204,8 @@ const GlobalCssReset = css`
     }
 
     /**
- * Restore the focus styles unset by the previous rule.
- */
-
+     * Restore the focus styles unset by the previous rule.
+     */
     button:-moz-focusring,
     [type='button']:-moz-focusring,
     [type='reset']:-moz-focusring,
@@ -233,20 +214,18 @@ const GlobalCssReset = css`
     }
 
     /**
- * Correct the padding in Firefox.
- */
-
+     * Correct the padding in Firefox.
+     */
     fieldset {
         padding: 0.35em 0.75em 0.625em;
     }
 
     /**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from fieldset elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    fieldset elements in all browsers.
- */
-
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from fieldset elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    fieldset elements in all browsers.
+     */
     legend {
         box-sizing: border-box; /* 1 */
         color: inherit; /* 2 */
@@ -257,26 +236,23 @@ const GlobalCssReset = css`
     }
 
     /**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
     progress {
         vertical-align: baseline;
     }
 
     /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
+     * Remove the default vertical scrollbar in IE 10+.
+     */
     textarea {
         overflow: auto;
     }
 
     /**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
     [type='checkbox'],
     [type='radio'] {
         box-sizing: border-box; /* 1 */
@@ -284,37 +260,33 @@ const GlobalCssReset = css`
     }
 
     /**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
     [type='number']::inner-spin-button,
     [type='number']::outer-spin-button {
         height: auto;
     }
 
     /**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
     [type='search'] {
         appearance: textfield; /* 1 */
         outline-offset: -2px; /* 2 */
     }
 
     /**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
     [type='search']::search-decoration {
         appearance: none;
     }
 
     /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to inherit in Safari.
- */
-
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to inherit in Safari.
+     */
     ::file-upload-button {
         appearance: button; /* 1 */
         font: inherit; /* 2 */
@@ -324,17 +296,15 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
     details {
         display: block;
     }
 
     /*
- * Add the correct display in all browsers.
- */
-
+     * Add the correct display in all browsers.
+     */
     summary {
         display: list-item;
     }
@@ -343,17 +313,15 @@ const GlobalCssReset = css`
    ========================================================================== */
 
     /**
- * Add the correct display in IE 10+.
- */
-
+     * Add the correct display in IE 10+.
+     */
     template {
         display: none;
     }
 
     /**
- * Add the correct display in IE 10.
- */
-
+     * Add the correct display in IE 10.
+     */
     [hidden] {
         display: none;
     }
