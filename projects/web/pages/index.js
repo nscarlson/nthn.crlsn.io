@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 const StyledAvatar = styled.img`
     border-radius:50%;
