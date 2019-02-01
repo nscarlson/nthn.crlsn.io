@@ -337,7 +337,7 @@ class MyApp extends App {
                 <Container>
                     <Head>
                         <link
-                            href="/static/images/n.png"
+                            href="/static/images/favicon.png"
                             rel="icon"
                             type="image/x-icon"
                         />
