@@ -33,9 +33,6 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
-          name: Install Now
-          command: yarn add now
-      - run:
           name: Deploy to now.sh
           command: yarn now -t ${NOW_TOKEN}
 
