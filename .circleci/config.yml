@@ -27,7 +27,6 @@ jobs:
       - image: circleci/node:10.15
     working_directory: ~/repo
     steps:
-      - checkout
       - run:
           name: Install Now
           commands:
