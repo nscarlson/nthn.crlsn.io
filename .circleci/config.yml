@@ -28,13 +28,10 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
       - run:
           name: Install Now
-          command: yarn add now
+          commands:
+            - yarn add now
       - run:
           name: Deploy to now.sh
           commands:
