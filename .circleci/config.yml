@@ -34,7 +34,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: Deploy to now.sh
-          command: yarn now -t ${NOW_TOKEN}
+          command: yarn now -t ${NOW_TOKEN} alias crlsn.now.sh nthn.crlsn.io
 
 workflows:
   version: 2
@@ -42,5 +42,6 @@ workflows:
     jobs:
       - build
       - deploy:
+          type: approval
           requires:
             - build
