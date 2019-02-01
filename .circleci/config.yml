@@ -27,12 +27,18 @@ jobs:
       - image: circleci/node:10.15
     working_directory: ~/repo
     steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run:
           name: Install Now
           command: yarn add now
       - run:
           name: Deploy to now.sh
-          command: yarn now -t ${NOW_TOKEN}
+          commands:
+            - yarn now -t ${NOW_TOKEN}
 
 workflows:
   version: 2
