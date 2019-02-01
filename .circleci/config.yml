@@ -25,6 +25,9 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:10.15
+    environment:
+      PATH: '${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin'
+
     working_directory: ~/repo
     steps:
       - run:
