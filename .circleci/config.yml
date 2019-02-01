@@ -36,9 +36,18 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
       # - run: yarn test
+  deploy:
+    steps:
+      - run:
+          name: Deploy to now.sh
+          command: now -t ${NOW_TOKEN}
 
 workflows:
   version: 2
   Build and Deploy:
     jobs:
       - build
+      - deploy
+          type: approval
+          requires:
+            - build
