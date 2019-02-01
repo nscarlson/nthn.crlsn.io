@@ -25,17 +25,14 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:10.15
-    environment:
-      PATH: '${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin'
-
     working_directory: ~/repo
     steps:
       - run:
           name: Install Now
-          command: yarn global add now
+          command: yarn add now
       - run:
           name: Deploy to now.sh
-          command: now -t ${NOW_TOKEN}
+          command: yarn now -t ${NOW_TOKEN}
 
 workflows:
   version: 2
