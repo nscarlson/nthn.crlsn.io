@@ -31,11 +31,8 @@ jobs:
       # run tests!
       # - run: yarn test
   deploy:
-    machine:
-      environment:
-        PATH: '${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin'
-      node:
-        version: 10.15
+    docker:
+      - image: circleci/node:10.15
 
     steps:
       - run:
