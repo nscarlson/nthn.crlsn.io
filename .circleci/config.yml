@@ -34,3 +34,16 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
       # - run: yarn test
+
+workflows:
+  version: 2
+  Build and Deploy:
+    jobs:
+      - deploy-production:
+          command: echo "HELLO WORLD"
+          name: deploy
+        requires:
+          - build
+        filters:
+          brances:
+            only: master
