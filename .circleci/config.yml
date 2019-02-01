@@ -7,9 +7,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15
-
     working_directory: ~/repo
-
     steps:
       - checkout
       - restore_cache:
@@ -24,11 +22,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      # run tests!
-      # - run: yarn test
   deploy:
     docker:
       - image: circleci/node:10.15
+    working_directory: ~/repo
     steps:
       - run:
           name: Install Now
@@ -39,8 +36,8 @@ jobs:
 
 workflows:
   version: 2
-  Build and Deploy:
+  build-and-deploy:
     jobs:
-      - build
-      - deploy
+      - build:
+      - deploy:
           name: Deploy
