@@ -43,6 +43,10 @@ workflows:
     jobs:
       - build
       - deploy:
+          filters:
+            branches:
+              only:
+                - master
           type: approval
           requires:
             - build
