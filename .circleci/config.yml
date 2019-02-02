@@ -38,7 +38,7 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-      - deploy:
+      - approve_deploy:
           filters:
             branches:
               only:
@@ -46,3 +46,6 @@ workflows:
           type: approval
           requires:
             - build
+      - deploy:
+          requires:
+            - approve_deploy
