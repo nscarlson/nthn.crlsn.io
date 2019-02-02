@@ -16,9 +16,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: Install Dependencies
-          command: |
-            yarn
-            echo ${NOW_TOKEN}
+          command: yarn
 
       - save_cache:
           paths:
