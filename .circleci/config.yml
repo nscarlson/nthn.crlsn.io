@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Deploy to now.sh
 
-          command: yarn now -t ${NOW_TOKEN} alias crlsn.now.sh nthn.crlsn.io
+          command: yarn now -t ${NOW_TOKEN} alias
 
 workflows:
   version: 2
