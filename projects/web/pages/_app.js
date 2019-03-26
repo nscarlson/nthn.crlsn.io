@@ -325,6 +325,12 @@ const GlobalCssReset = css`
     [hidden] {
         display: none;
     }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+    }
 `
 
 class MyApp extends App {
