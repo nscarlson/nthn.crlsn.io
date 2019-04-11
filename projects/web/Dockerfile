@@ -1,16 +1,10 @@
-FROM node:boron
-MAINTAINER Nathan Carlson <nathan.s.carlson@gmail.com>
+FROM node:10
 
-RUN mkdir -p /nthn.crlsn
+WORKDIR /web
 
-WORKDIR /nthn.crlsn
+COPY . ./
 
-COPY ./dist /nthn.crlsn/dist
-COPY ./node_modules /nthn.crlsn/node_modules
-COPY ./package.json /nthn.crlsn/package.json
-COPY ./private /nthn.crlsn/private
-COPY ./webpack-assets.json /nthn.crlsn/webpack-assets.json
+RUN yarn
+RUN yarn next build
 
-EXPOSE 3000
-
-CMD [ "npm", "start" ]
+CMD ["yarn", "next", "start"]
