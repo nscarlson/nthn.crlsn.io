@@ -3,7 +3,7 @@ import { array } from 'prop-types'
 import React from 'react'
 import { Query } from 'react-apollo'
 
-import Article from 'components/Article'
+import Article from '../components/Article'
 
 const blogQuery = gql`
     {

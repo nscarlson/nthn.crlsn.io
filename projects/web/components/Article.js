@@ -2,7 +2,7 @@ import marked from 'marked'
 import { string, bool } from 'prop-types'
 import React from 'react'
 
-import Tag from 'components/Tag'
+import Tag from '../components/Tag'
 
 const getAscii = (b64) => Buffer.from(b64, 'base64').toString()
 
