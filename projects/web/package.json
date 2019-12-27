@@ -12,8 +12,8 @@
     "author": "",
     "dependencies": {
         "apollo-cache-inmemory": "1.6.5",
-        "@emotion/core": "10.0.21",
-        "@emotion/styled": "10.0.17",
+        "@emotion/core": "10.0.27",
+        "@emotion/styled": "10.0.27",
         "graphql": "14.5.8",
         "formik": "^2.0.0",
         "next": "9.0.2",
