@@ -56,6 +56,8 @@ openssl req -new \
     || exit_with_error $? !!
 
 # Generate cert with CA and CSR
+# IMPORTANT: CA/Browser Forum ballot 193 https://cabforum.org/2017/03/17/ballot-193-825-day-certificate-lifetimes/
+# Certs with TTL > 825 are regarded as revoked
 echo 'Generating localhost cert'
 openssl x509 -req \
     -in $CERTS_DIR/certificate.csr \
@@ -64,7 +66,7 @@ openssl x509 -req \
     -CAkey $CERTS_DIR/certificate-authority.key \
     -extfile $CERTS_DIR/certificate.conf \
     -CAcreateserial \
-    -days 10000 \
+    -days 825 \
     -sha256 \
     || exit_with_error $? !!
 
