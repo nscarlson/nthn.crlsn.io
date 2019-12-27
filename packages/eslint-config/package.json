@@ -1,7 +1,8 @@
 {
-    "name": "eslint-config-crlsn",
+    "name": "eslint-config",
     "version": "1.0.0",
     "description": "crlsn eslint configuration",
+    "main": "index.js",
     "keywords": [
         "crlsn",
         "crypto",

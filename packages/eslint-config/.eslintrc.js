@@ -6,27 +6,58 @@ module.exports = {
         jest: true,
         node: true,
     },
+    extends: [
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
+        'prettier/@typescript-eslint',
+    ],
     globals: {
+        before: true,
         browser: true,
+        context: true,
+        cy: true,
+        Cypress: true,
         document: false,
         fetch: true,
         navigator: false,
         window: false,
     },
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
         },
         ecmaVersion: 9,
+        tsconfigRootDir: '../../',
         sourceType: 'module',
     },
-    plugins: ['import', 'jest', 'node', 'promise', 'prettier', 'react'],
+    plugins: [
+        'import',
+        'jest',
+        'node',
+        'promise',
+        'prettier',
+        'react',
+        '@typescript-eslint',
+    ],
     rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/consistent-type-definitions': [
+            'error',
+            'interface',
+        ],
+        '@typescript-eslint/explicit-member-accessibility': [
+            'warn',
+            { accessibility: 'no-public' },
+        ],
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/member-delimiter-style': [
+            'warn',
+            { multiline: { delimiter: 'none' } },
+        ],
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
         'arrow-body-style': 'error',
-        camelcase: ['error', { properties: 'never' }],
         complexity: ['error', 10],
         'constructor-super': 'error',
         'dot-notation': 'error',
@@ -72,13 +103,13 @@ module.exports = {
         'new-cap': ['error', { capIsNew: false, newIsCap: true }],
         'new-parens': 'error',
         'no-array-constructor': 'error',
-        'no-await-in-loop': 'error',
         'no-buffer-constructor': 'error',
         'no-caller': 'error',
         'no-case-declarations': 'error',
         'no-class-assign': 'error',
         'no-compare-neg-zero': 'error',
         'no-cond-assign': 'error',
+        'no-confusing-arrow': ['error', { allowParens: false }],
         'no-const-assign': 'error',
         'no-constant-condition': 'error',
         'no-control-regex': 'error',
@@ -171,11 +202,6 @@ module.exports = {
                 allowTernary: true,
             },
         ],
-        'no-unused-vars': ['error', { ignoreRestSiblings: true }],
-        'no-use-before-define': [
-            'error',
-            { classes: false, functions: false, variables: false },
-        ],
         'no-useless-call': 'error',
         'no-useless-computed-key': 'error',
         'no-useless-constructor': 'error',
@@ -234,8 +260,8 @@ module.exports = {
         'react/jsx-uses-vars': 'error',
 
         /*
-        * Note: this rule only applies to an inline cb to Array.prototype.map
-        */
+         * Note: this rule only applies to an inline cb to Array.prototype.map
+         */
         'react/no-array-index-key': 'warn',
         'react/no-children-prop': 'error',
         'react/no-danger': 'error',
@@ -243,8 +269,8 @@ module.exports = {
         'react/no-direct-mutation-state': 'error',
 
         /*
-       * Enable this rule to keep component files simple
-       */
+         * Enable this rule to keep component files simple
+         */
         'react/no-multi-comp': ['warn', { ignoreStateless: true }],
 
         'react/no-redundant-should-component-update': 'error',
@@ -266,9 +292,13 @@ module.exports = {
         'symbol-description': 'error',
         'unicode-bom': ['error', 'never'],
         'use-isnan': 'error',
-        'valid-jsdoc': ['error', { prefer: '' }],
+        'valid-jsdoc': 'error',
         'valid-typeof': 'error',
         'wrap-iife': ['error', 'inside'],
-        yoda: 'error',
+    },
+    settings: {
+        react: {
+            version: 'latest',
+        },
     },
 }

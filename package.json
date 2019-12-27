@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "build:dev": "webpack --mode=development",
-        "build:prod": "webpack --mode=production",
+        "build": "lerna run build",
+        "build:docker": "docker build -t source .",
         "predev": "yarn dev:docker",
         "dev": "yarn dev:local",
         "dev:compose": "docker-compose",
