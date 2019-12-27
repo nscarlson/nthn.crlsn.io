@@ -1,1 +1,1 @@
-module.exports = require("eslint-config-crlsn/prettier.config");
+module.exports = require('@crlsn/eslint-config/prettier.config')
