@@ -34,6 +34,6 @@
         "npm-run-all": "4.1.5"
     },
     "dependencies": {
-        "now": "17.0.0"
+        "now": "17.0.1"
     }
 }
