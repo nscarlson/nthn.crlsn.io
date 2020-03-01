@@ -9,15 +9,15 @@ import Home from 'scenes/Home'
 import Projects from 'scenes/Projects'
 
 const App = () => (
-  <Layout>
-    <Switch>
-      <Route component={Home} exact path="/" />
-      <Route component={About} exact path="/about" />
-      <Route component={Blog} exact path="/blog" />
-      <Route component={Edit} exact path="/edit/:slug" />
-      <Route component={Projects} exact path="/projects" />
-    </Switch>
-  </Layout>
+    <Layout>
+        <Switch>
+            <Route component={Home} exact path="/" />
+            <Route component={About} exact path="/about" />
+            <Route component={Blog} exact path="/blog" />
+            <Route component={Edit} exact path="/edit/:slug" />
+            <Route component={Projects} exact path="/projects" />
+        </Switch>
+    </Layout>
 )
 
 App.displayName = 'App'
