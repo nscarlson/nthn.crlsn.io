@@ -9,12 +9,18 @@ interface HeaderProps {
 
 const Header = ({ appTitle }: HeaderProps) => (
     <S.Header>
-        <Link href="/">{appTitle}</Link>
+        <Link href="/">
+            <a>{appTitle}</a>
+        </Link>
         <ul>
-            <Link href="/projects">[ Projects ]</Link>
+            <Link href="/projects">
+                <a>[ Projects ]</a>
+            </Link>
         </ul>
         <ul>
-            <Link href="/about">[ About ]</Link>
+            <Link href="/about">
+                <a>[ About ]</a>
+            </Link>
         </ul>
     </S.Header>
 )
