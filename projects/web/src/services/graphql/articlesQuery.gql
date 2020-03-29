@@ -1,7 +1,0 @@
-query getArticles {
-  allArticles {
-    id
-    content
-    title
-  }
-}
