@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700); /*!
+@import url(
+    https://fonts.googleapis.com/css?family=Inconsolata:400,
+    700
+); /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
@@ -16,107 +19,107 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 2em;
+    line-height: 2em;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 body {
-  font-family: Inconsolata,monospace;
+    font-family: Inconsolata, monospace;
 }
 
 div#app {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 div.content {
-  margin: 0 auto;
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
+    margin: 0 auto;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
 }
 
 div.content img,
 div.content p {
-  margin: 0.4em 0;
+    margin: 0.4em 0;
 }
 
 div.content blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
 }
 
 div.content blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -.4em;
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
 }
 
 div.content blockquote p {
-  display: inline;
+    display: inline;
 }
 
 div.content pre code {
-  display: block;
-  background-color: #f7f7f7;
-  padding: 16px;
-  overflow: auto;
-  border-radius: 3px;
-  font: consolas;
+    display: block;
+    background-color: #f7f7f7;
+    padding: 16px;
+    overflow: auto;
+    border-radius: 3px;
+    font: consolas;
 }
 
 h1.section {
-  font-weight: 400;
-  font-size: 100%;
+    font-weight: 400;
+    font-size: 100%;
 }
 
 ul.nav li {
-  display: inline;
+    display: inline;
 }
 
 ul.nav li a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-ul.nav li+li {
-  margin-left: 2em;
+ul.nav li + li {
+    margin-left: 2em;
 }
 
 a:link,
 a:visited {
-  color: #000;
+    color: #000;
 }
 
-i+a {
-  margin-left: 1em;
+i + a {
+    margin-left: 1em;
 }
 /*# sourceMappingURL=main.css.map*/
