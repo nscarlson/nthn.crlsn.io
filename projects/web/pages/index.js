@@ -17,7 +17,7 @@ const AlignedContent = styled.div``
 const Index = () => (
     <div className="app">
         <Centered>
-            <StyledAvatar src="/static/images/avatar.jpg" />
+            <StyledAvatar src="/images/avatar.jpg" />
         </Centered>
     </div>
 )

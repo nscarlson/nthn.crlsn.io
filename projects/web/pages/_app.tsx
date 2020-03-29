@@ -35,13 +35,13 @@ class MyApp extends App {
                         }
                     `}
                 />
-                {/* <Head>
+                <Head>
                     <link
-                        href="/static/images/favicon.png"
+                        href="/images/favicon.png"
                         rel="icon"
                         type="image/x-icon"
                     />
-                </Head> */}
+                </Head>
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
