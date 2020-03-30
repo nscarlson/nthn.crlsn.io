@@ -8,9 +8,9 @@ interface TagProps {
 }
 
 const Tag = ({ name }: TagProps) => (
-    <S.Tag>
-        <Link href={`/tag/${name}`}>{name}</Link>
-    </S.Tag>
+    <Link href={`/tag/${name}`} passHref>
+        <S.Tag>{name}</S.Tag>
+    </Link>
 )
 
 export default Tag

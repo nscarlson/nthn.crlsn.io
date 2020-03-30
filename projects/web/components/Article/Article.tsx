@@ -1,6 +1,9 @@
 // import marked from 'marked'
 import React, { ReactNode } from 'react'
 
+import Flex from '../Flex'
+import Tag from '../Tag'
+
 import * as S from './styles'
 
 // const getAscii = (b64: string) => Buffer.from(b64, 'base64').toString()
@@ -12,6 +15,7 @@ import * as S from './styles'
 
 interface ArticleProps {
     children?: ReactNode
+    tags?: string[]
 }
 
 // const Article = ({ content }: ArticleProps) => (
@@ -28,8 +32,15 @@ interface ArticleProps {
 //     </section>
 // )
 
-const Article = ({ children }: ArticleProps) => (
-    <S.Article>{children}</S.Article>
+const Article = ({ children, tags }: ArticleProps) => (
+    <>
+        <S.Article>{children}</S.Article>
+        <Flex flexWrap="wrap" justifyContent="flex-start">
+            {tags?.map((tag) => (
+                <Tag name={tag} />
+            ))}
+        </Flex>
+    </>
 )
 
 export default Article

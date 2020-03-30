@@ -6,8 +6,14 @@ interface FlexProps {
     children?: ReactNode
 }
 
-const Flex = ({ children, justifyContent }: FlexProps & S.FlexProps) => (
-    <S.Flex justifyContent={justifyContent}>{children}</S.Flex>
+const Flex = ({
+    children,
+    flexWrap,
+    justifyContent,
+}: FlexProps & S.FlexProps) => (
+    <S.Flex flexWrap={flexWrap} justifyContent={justifyContent}>
+        {children}
+    </S.Flex>
 )
 
 export default Flex
