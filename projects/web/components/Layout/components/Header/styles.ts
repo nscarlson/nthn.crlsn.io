@@ -2,8 +2,7 @@ import styled from '@emotion/styled'
 
 export const Header = styled.div`
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-evenly;
 
     height: 50px;
     width: 600px;

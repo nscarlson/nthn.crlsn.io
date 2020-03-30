@@ -23,14 +23,27 @@ class MyApp extends App {
             <>
                 <Global
                     styles={() => css`
+                        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+                        @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
                         * {
                             border: none;
                             margin: 0;
                             padding: 0;
                         }
 
+                        a {
+                            text-decoration: underline;
+                        }
+
+                        h1 {
+                            font-family: 'Montserrat', monospace;
+                            font-size: 16px;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                        }
+
                         html {
-                            font-family: Helvetica, Arial, sans-serif;
+                            font-family: 'Inconsolata', monospace;
                             height: 100%;
                         }
                     `}
