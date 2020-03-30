@@ -1,7 +1,8 @@
 import React from 'react'
+import Article from '../components/Article'
 
 const About = () => (
-    <div className="content">
+    <Article>
         {/* <h1 className="section">{'[ About Nathan ]'}</h1>
         <p>
             {
@@ -9,7 +10,7 @@ const About = () => (
             }
         </p> */}
         <h1>Coming soon</h1>
-    </div>
+    </Article>
 )
 
 export default About

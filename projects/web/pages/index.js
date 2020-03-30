@@ -1,24 +1,11 @@
-import React, { Component } from 'react'
-import styled from '@emotion/styled'
-
-const Centered = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-`
-
-const StyledAvatar = styled.img`
-    border-radius: 50%;
-`
-
-const AlignedContent = styled.div``
+import React from 'react'
+import Article from '../components/Article'
 
 const Index = () => (
     <div className="app">
-        <Centered>
-            <StyledAvatar src="/images/avatar.jpg" />
-        </Centered>
+        <Article>
+            <h1>Coming Soon</h1>
+        </Article>
     </div>
 )
 
