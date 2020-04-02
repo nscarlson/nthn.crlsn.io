@@ -17,7 +17,7 @@
         "apollo-client": "2.6.8",
         "apollo-server": "2.11.0",
         "formik": "2.1.4",
-        "graphql": "14.6.0",
+        "graphql": "15.0.0",
         "marked": "0.8.2",
         "next": "9.3.4",
         "next-build-id": "3.0.0",
