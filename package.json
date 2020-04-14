@@ -35,6 +35,6 @@
     },
     "dependencies": {
         "@types/react": "16.9.34",
-        "now": "17.1.1"
+        "now": "18.0.0"
     }
 }
