@@ -6,4 +6,5 @@ export const Tag = styled.a`
     border-radius: 4px;
     margin: 4px;
     text-decoration: none;
+    font-size: 10pt;
 `

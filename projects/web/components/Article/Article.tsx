@@ -14,8 +14,10 @@ import * as S from './styles'
 // }
 
 interface ArticleProps {
-    children?: ReactNode
+    content: string
+    id: string
     tags?: string[]
+    title: string
 }
 
 // const Article = ({ content }: ArticleProps) => (
@@ -32,15 +34,19 @@ interface ArticleProps {
 //     </section>
 // )
 
-const Article = ({ children, tags }: ArticleProps) => (
-    <>
-        <S.Article>{children}</S.Article>
+const Article = ({ id, content, tags, title }: ArticleProps) => (
+    <section>
+        <article>
+            <S.Title>{title}</S.Title>
+            <S.Content dangerouslySetInnerHTML={{ __html: content || '' }} />
+        </article>
+
         <Flex flexWrap="wrap" justifyContent="flex-start">
-            {tags?.map((tag) => (
-                <Tag name={tag} />
+            {tags?.map((tag, i) => (
+                <Tag key={i} name={tag} />
             ))}
         </Flex>
-    </>
+    </section>
 )
 
 export default Article

@@ -9,7 +9,7 @@ const About = () => (
                 'Nathan typifies the perpetually quizzical human being who experiences everything with wide-eyed novelty.'
             }
         </p> */}
-        <h1>Coming soon</h1>
+        <h1>Who is Nathan?</h1>
     </Article>
 )
 
