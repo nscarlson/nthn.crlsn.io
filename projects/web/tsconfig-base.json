@@ -20,7 +20,7 @@
         "noImplicitAny": true,
         "noUnusedLocals": true,
         "resolveJsonModule": true,
-        "rootDirs": ["./projects/graphql/src", "./packages/orm/src"],
+        "rootDirs": ["./projects/graphql/src"],
         "skipLibCheck": true,
         "sourceMap": true,
         // Enable strictest settings like strictNullChecks & noImplicitAny.

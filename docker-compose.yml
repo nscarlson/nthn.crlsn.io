@@ -11,6 +11,7 @@ services:
       crlsn:
         aliases:
           - nthn.crlsn.io.localhost
+          - graphql.nthn.crlsn.io.localhost
 
     ports:
       - '443:443'
