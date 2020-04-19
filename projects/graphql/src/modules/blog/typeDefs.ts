@@ -9,5 +9,6 @@ export default gql`
         id: ID!
         slug: String!
         content: String!
+        title: String!
     }
 `

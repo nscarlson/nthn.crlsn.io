@@ -5,7 +5,16 @@ import Head from 'next/head'
 import React from 'react'
 import Layout from '../components/Layout'
 
-class MyApp extends App {
+import ApolloClient from 'apollo-client'
+import { ApolloProvider } from 'react-apollo'
+import withApolloClient from '../lib/apollo-client'
+import { NormalizedCacheObject } from 'apollo-cache-inmemory'
+
+interface ApolloProps {
+    apollo: ApolloClient<NormalizedCacheObject>
+    apolloState?: NormalizedCacheObject
+}
+class MyApp extends App<ApolloProps> {
     static async getInitialProps({ Component, ctx }: AppContext) {
         let pageProps = {}
 
@@ -17,14 +26,14 @@ class MyApp extends App {
     }
 
     render() {
-        const { Component, pageProps } = this.props
+        const { apollo, Component, pageProps } = this.props
 
         return (
-            <>
+            <ApolloProvider client={apollo}>
                 <Global
                     styles={() => css`
-                        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-                        @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+                        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=block');
+                        @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=block');
                         * {
                             color: black;
                             border: none;
@@ -59,9 +68,9 @@ class MyApp extends App {
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
-            </>
+            </ApolloProvider>
         )
     }
 }
 
-export default MyApp
+export default withApolloClient(MyApp)
