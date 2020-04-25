@@ -1,7 +1,7 @@
-import React from 'react'
-import Article from '../components/Article'
-import { useQuery } from 'react-apollo'
 import gql from 'graphql-tag'
+import React from 'react'
+import { useQuery } from '@apollo/react-hooks'
+import Article from '../components/Article'
 
 const GET_ARTICLE = gql`
     query getArticle($postId: ID!) {
@@ -14,7 +14,7 @@ const GET_ARTICLE = gql`
     }
 `
 
-const Projects = () => {
+const Index = () => {
     const { data, loading } = useQuery(GET_ARTICLE, {
         variables: { postId: '1234-1234-1234-1234' },
     })
@@ -37,4 +37,4 @@ const Projects = () => {
     return null
 }
 
-export default Projects
+export default Index

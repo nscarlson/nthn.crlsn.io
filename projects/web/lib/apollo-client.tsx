@@ -7,8 +7,6 @@ import getConfig from 'next/config'
 
 const { publicRuntimeConfig } = getConfig()
 
-console.log(publicRuntimeConfig.GRAPHQL_ENDPOINT)
-
 // Export a HOC from next-with-apollo
 // Docs: https://www.npmjs.com/package/next-with-apollo
 export default withApollo(

@@ -62,7 +62,6 @@ the inspiration to this, and some handy implementation hints, came.
 
     handleUpdateText = (text) => {
         this.setState({ text })
-        console.log(this.state.text)
     }
 
     handleSubmit = (e) => {
