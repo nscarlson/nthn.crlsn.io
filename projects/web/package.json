@@ -11,7 +11,6 @@
     "dependencies": {
         "@emotion/core": "10.0.28",
         "@emotion/styled": "10.0.27",
-        "@types/marked": "0.7.4",
         "@types/react": "16.9.34",
         "apollo-cache-inmemory": "1.6.5",
         "apollo-client": "2.6.8",
@@ -20,7 +19,6 @@
         "dotenv": "8.2.0",
         "formik": "2.1.4",
         "graphql": "15.0.0",
-        "marked": "1.0.0",
         "next": "9.3.5",
         "next-build-id": "3.0.0",
         "next-with-apollo": "5.0.1",
