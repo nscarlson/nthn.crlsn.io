@@ -20,7 +20,7 @@
         "marked": "^1.0.0",
         "nodemon": "2.0.3",
         "reflect-metadata": "0.1.13",
-        "sanitize-html": "^1.23.0",
+        "sanitize-html": "1.23.0",
         "typescript": "3.8.3"
     }
 }
