@@ -10,8 +10,25 @@ export const Content = styled.div`
         text-align: justify;
     }
 
+    blockquote {
+        border-left: 5px solid grey;
+        font-style: italic;
+
+        padding-left: 10px;
+    }
+
+    pre {
+        border-radius: 4px;
+        padding: 20px;
+
+        background-color: lightgray;
+        code {
+        }
+    }
+
     h1 {
         text-align: center;
+        font-family: 'Montserrat', monospace;
     }
 `
 
