@@ -1,3 +1,6 @@
+import marked from 'marked'
+import sanitizeHtml from 'sanitize-html'
+
 const posts = [
     {
         id: '1234-1234-1234-1234',
@@ -30,6 +33,12 @@ dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.
     },
 ]
 
+const parseMarkdown = (markdown: string) => {
+    const rawMarkup = marked(markdown)
+
+    return sanitizeHtml(rawMarkup)
+}
+
 const postById = (
     root: object,
     args: {
@@ -37,7 +46,14 @@ const postById = (
     },
 ) => {
     try {
-        return posts.find((post) => post.id === args.postId)
+        const post = posts.find((post) => post.id === args.postId)
+
+        const sanitizedMarkup = parseMarkdown(post?.content || '')
+
+        return {
+            ...post,
+            content: sanitizedMarkup,
+        }
     } catch (err) {
         console.error(err)
         throw err

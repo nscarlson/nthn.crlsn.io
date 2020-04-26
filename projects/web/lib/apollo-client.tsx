@@ -18,6 +18,5 @@ export default withApollo(
                 fetch,
                 uri: publicRuntimeConfig.GRAPHQL_ENDPOINT, // Server URL (must be absolute)
             }),
-            ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
         }),
 )
