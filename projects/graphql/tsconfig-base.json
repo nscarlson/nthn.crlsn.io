@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         // Process & infer types from .js files.
-        "allowJs": false,
+        "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "composite": true,
         "declaration": true,
