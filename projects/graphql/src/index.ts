@@ -2,6 +2,8 @@ import 'reflect-metadata'
 import { ApolloServer } from 'apollo-server'
 import { modules } from './modules'
 
+require('dotenv').config()
+
 const { schema } = modules
 
 const apolloConfig = {
