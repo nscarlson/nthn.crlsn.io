@@ -1,6 +1,5 @@
 import AWS from 'aws-sdk'
 import fs from 'fs'
-import path from 'path'
 
 AWS.config.update({ region: '' })
 
@@ -11,7 +10,9 @@ interface CreateBucketParams {
 
 interface UploadParams {
     Bucket: string
-    file: string
+    stream: fs.ReadStream
+    filename: string
+    mimetype: string
 }
 
 class S3 {
@@ -20,6 +21,7 @@ class S3 {
     }
 
     s3Client: AWS.S3
+    bucket: string
 
     createBucket = (createBucketParams: CreateBucketParams) => {
         this.s3Client.createBucket(createBucketParams, function (err, data) {
@@ -41,26 +43,14 @@ class S3 {
         })
     }
 
-    upload = (uploadParams: UploadParams) => {
-        const filestream = fs.createReadStream(uploadParams.file)
-        const Key = path.basename(uploadParams.file)
-
-        this.s3Client.upload(
-            {
-                Bucket: uploadParams.Bucket,
-                Body: filestream,
-                Key,
-            },
-            function (err, data) {
-                if (err) {
-                    console.log('Error', err)
-                }
-                if (data) {
-                    console.log('Upload Success', data.Location)
-                }
-            },
-        )
-    }
+    upload = ({ Bucket, filename, stream }: UploadParams) =>
+        this.s3Client
+            .upload({
+                Bucket,
+                Body: stream,
+                Key: filename,
+            })
+            .promise()
 }
 
 export default S3
