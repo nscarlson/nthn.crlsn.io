@@ -1,5 +1,5 @@
 import ApolloClient from 'apollo-client'
-import { HttpLink } from 'apollo-link-http'
+import { createUploadLink } from 'apollo-upload-client'
 import withApollo from 'next-with-apollo'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
@@ -14,9 +14,8 @@ export default withApollo(
         new ApolloClient({
             cache: new InMemoryCache().restore(initialState || {}),
             connectToDevTools: process.browser,
-            link: new HttpLink({
-                fetch,
-                uri: publicRuntimeConfig.GRAPHQL_ENDPOINT, // Server URL (must be absolute)
+            link: createUploadLink({
+                uri: publicRuntimeConfig.GRAPHQL_ENDPOINT,
             }),
         }),
 )
