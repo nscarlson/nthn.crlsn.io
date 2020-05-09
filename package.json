@@ -12,7 +12,7 @@
         "db:migrate:revert": "lerna run db:migrate:revert --scope @crlsn/orm",
         "dev": "yarn dev:local",
         "dev:compose": "docker-compose",
-        "dev:docker": "yarn -s dev:up nginx",
+        "dev:docker": "yarn -s dev:up nginx fusionauth-db fusionauth",
         "dev:docker:compose": "docker-compose",
         "dev:local": "lerna run dev --stream",
         "dev:up": "yarn -s dev:compose up --build --detach",

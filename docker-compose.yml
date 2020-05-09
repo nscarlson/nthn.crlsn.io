@@ -12,6 +12,7 @@ services:
         aliases:
           - nthn.crlsn.io.localhost
           - graphql.nthn.crlsn.io.localhost
+          - fusionauth.crlsn.io.localhost
 
     ports:
       - '443:443'
@@ -25,47 +26,28 @@ services:
 
   fusionauth:
     container_name: fusionauth
-    image: fusionauth/fusionauth-app:1.15.8
+    image: fusionauth/fusionauth-app:latest
     depends_on:
       - fusionauth-db
-      - search
     environment:
       DATABASE_URL: jdbc:postgresql://fusionauth-db:5433/fusionauth
-      DATABASE_ROOT_USER: ${POSTGRES_USER}
-      DATABASE_ROOT_PASSWORD: ${POSTGRES_PASSWORD}
+      DATABASE_ROOT_USER: ${DATABASE_USER}
+      DATABASE_ROOT_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_USER: ${DATABASE_USER}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       FUSIONAUTH_MEMORY: ${FUSIONAUTH_MEMORY}
-      FUSIONAUTH_SEARCH_SERVERS: http://search:9200
-      FUSIONAUTH_URL: http://fusionauth:9011
+      FUSIONAUTH_SEARCH_ENGINE_TYPE: database
+      FUSIONAUTH_URL: https://fusionauth.crlsn.io
     restart: unless-stopped
     ports:
       - '9011:9011'
-
-  search:
-    container_name: search
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.1
-    environment:
-      - cluster.name=fusionauth
-      - bootstrap.memory_lock=true
-      - 'ES_JAVA_OPTS=${ES_JAVA_OPTS}'
-    ports:
-      - '9200:9200'
-      - '9300:9300'
-    restart: unless-stopped
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    volumes:
-      - ./.volumes/es_data:/usr/share/elasticsearch/data
 
   fusionauth-db:
     container_name: fusionauth-db
     image: postgres
     environment:
-      POSTGRES_USER: crlsn
-      POSTGRES_PASSWORD: crlsn
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: fusionauth
     command: -p 5433
     ports:
