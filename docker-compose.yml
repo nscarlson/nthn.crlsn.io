@@ -12,6 +12,7 @@ services:
         aliases:
           - nthn.crlsn.io.localhost
           - graphql.nthn.crlsn.io.localhost
+          - fusionauth.crlsn.io.localhost
 
     ports:
       - '443:443'
@@ -22,3 +23,35 @@ services:
       - '/var/run/docker.sock:/tmp/docker.sock:ro'
       - './certs:/etc/nginx/certs'
       - './projects/nginx-proxy/overrides.conf:/etc/nginx/conf.d/overrides.conf'
+
+  fusionauth:
+    container_name: fusionauth
+    image: fusionauth/fusionauth-app:latest
+    depends_on:
+      - fusionauth-db
+    environment:
+      DATABASE_URL: jdbc:postgresql://fusionauth-db:5433/fusionauth
+      DATABASE_ROOT_USER: ${DATABASE_USER}
+      DATABASE_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      FUSIONAUTH_MEMORY: ${FUSIONAUTH_MEMORY}
+      FUSIONAUTH_SEARCH_ENGINE_TYPE: database
+      FUSIONAUTH_URL: https://fusionauth.crlsn.io
+    restart: unless-stopped
+    ports:
+      - '9011:9011'
+
+  fusionauth-db:
+    container_name: fusionauth-db
+    image: postgres
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: fusionauth
+    command: -p 5433
+    ports:
+      - '5433:5433'
+    restart: always
+    volumes:
+      - ./.volumes/postgres_fusionauth/data:/var/lib/postgresql/data
