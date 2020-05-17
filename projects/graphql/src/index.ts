@@ -1,21 +1,49 @@
 import 'reflect-metadata'
-import { ApolloServer } from 'apollo-server'
+import { ApolloServer } from 'apollo-server-express'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
+import express from 'express'
 import { modules } from './modules'
 
 require('dotenv').config()
 
 const { schema } = modules
 
-const apolloConfig = {
-    schema,
-    context: ({ req }: { req: object }) => ({ req }),
-    introspection: true,
-    playground: true,
-}
-
 const init = async () => {
-    new ApolloServer(apolloConfig).listen().then(({ url }) => {
-        console.log(`🚀 Server ready at ${url}`)
+    const apolloServer = new ApolloServer({
+        schema,
+        context: ({ req, res }: { req: express.Request; res: any }) => ({
+            req,
+            res,
+        }),
+        introspection: true,
+        playground: {
+            settings: {
+                'request.credentials': 'include',
+            },
+        },
+    })
+
+    const corsOptions = {
+        origin: 'https://nthn.crlsn.io.localhost',
+        credentials: true,
+    }
+
+    const app = express()
+
+    app.disable('x-powered-by')
+
+    app.use(cookieParser())
+
+    app.use(cors(corsOptions))
+    apolloServer.applyMiddleware({
+        app,
+        cors: corsOptions,
+        path: '/',
+    })
+
+    app.listen({ port: 4000 }, () => {
+        console.log(`🚀 Server ready at ${apolloServer.graphqlPath}`)
     })
 }
 

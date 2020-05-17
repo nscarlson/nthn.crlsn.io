@@ -9,11 +9,13 @@ import ApolloClient from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import withApolloClient from '../lib/apollo-client'
 import { NormalizedCacheObject } from 'apollo-cache-inmemory'
+import { FusionAuthProvider } from '../lib/react-fusionauth-wrapper'
 
 interface ApolloProps {
     apollo: ApolloClient<NormalizedCacheObject>
     apolloState?: NormalizedCacheObject
 }
+
 class MyApp extends App<ApolloProps> {
     static async getInitialProps({ Component, ctx }: AppContext) {
         let pageProps = {}
@@ -58,16 +60,18 @@ class MyApp extends App<ApolloProps> {
                         }
                     `}
                 />
-                <Head>
-                    <link
-                        href="/images/favicon.png"
-                        rel="icon"
-                        type="image/x-icon"
-                    />
-                </Head>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <FusionAuthProvider>
+                    <Head>
+                        <link
+                            href="/images/favicon.png"
+                            rel="icon"
+                            type="image/x-icon"
+                        />
+                    </Head>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </FusionAuthProvider>
             </ApolloProvider>
         )
     }
