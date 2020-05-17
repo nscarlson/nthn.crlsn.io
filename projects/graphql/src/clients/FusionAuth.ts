@@ -14,8 +14,6 @@ const {
     FUSIONAUTH_URL,
 } = process.env
 
-console.log(FUSIONAUTH_API_KEY, FUSIONAUTH_APPLICATION_ID, FUSIONAUTH_URL)
-
 const fusionAuthClient = new FusionAuthClient(
     FUSIONAUTH_API_KEY || '',
     FUSIONAUTH_URL || '',
