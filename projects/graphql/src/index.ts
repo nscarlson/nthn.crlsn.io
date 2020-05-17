@@ -7,6 +7,8 @@ import { modules } from './modules'
 
 require('dotenv').config()
 
+const { PUBLIC_DOMAIN } = process.env
+
 const { schema } = modules
 
 const init = async () => {
@@ -25,7 +27,7 @@ const init = async () => {
     })
 
     const corsOptions = {
-        origin: 'https://nthn.crlsn.io.localhost',
+        origin: `https://${PUBLIC_DOMAIN}`,
         credentials: true,
     }
 
