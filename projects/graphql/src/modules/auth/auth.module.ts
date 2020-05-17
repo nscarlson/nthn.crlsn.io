@@ -14,7 +14,6 @@ const AuthModule = new GraphQLModule({
             // use http-only cookies for authentication
             const { token } = req.cookies
 
-            console.log('token:', token)
             const verifiedToken = await verifyToken(token)
             const email: string = verifiedToken?.response?.jwt?.email || ''
 

@@ -96,7 +96,6 @@ const retrieveUserByEmail = async (email: string) => {
 
 const verifyToken = async (token: string) => {
     try {
-        console.log('tokeen:', token)
         return fusionAuthClient.validateJWT(token)
     } catch (err) {
         return undefined
