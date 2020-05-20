@@ -29,6 +29,6 @@
         "reflect-metadata": "0.1.13",
         "sanitize-html": "1.24.0",
         "typescript": "3.9.3",
-        "uuid": "8.0.0"
+        "uuid": "8.1.0"
     }
 }
