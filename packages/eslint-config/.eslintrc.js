@@ -214,7 +214,13 @@ module.exports = {
         'node/process-exit-as-throw': 'error',
         'object-shorthand': 'error',
         'prefer-const': ['error', { destructuring: 'all' }],
-        'prefer-destructuring': 'warn',
+        'prefer-destructuring': [
+            'error',
+            {
+                array: false,
+                object: true,
+            },
+        ],
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',

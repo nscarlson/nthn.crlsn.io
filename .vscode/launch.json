@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GraphQL",
+            "type": "node",
+            "request": "attach",
+
+            "localRoot": "${workspaceRoot}",
+            "port": 4001,
+            "protocol": "inspector",
+            "remoteRoot": "${workspaceRoot}",
+            "restart": true,
+            "sourceMaps": true,
+            "stopOnEntry": false
+        }
+    ]
+}
