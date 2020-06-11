@@ -2547,9 +2547,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/sanitize-html@1.23.0":
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/@types/sanitize-html/-/sanitize-html-1.23.0.tgz#4ed2d6bdd44cb6ae027bd0a428142220da4334a7"
+"@types/sanitize-html@1.23.1":
+  version "1.23.1"
+  resolved "https://registry.yarnpkg.com/@types/sanitize-html/-/sanitize-html-1.23.1.tgz#914f12acef9999ec630c847cd52f63d37ba68943"
+  integrity sha512-crF+uCXmQYM4+8XPaKgzZAcD8LaPSdA/kM9I7trCmcj4iMusQH6bVfUnuXe/9bHfP2MYLCz6jpYZFkg9Vxuu4A==
   dependencies:
     htmlparser2 "^4.1.0"
 
