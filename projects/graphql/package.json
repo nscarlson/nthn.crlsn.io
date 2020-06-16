@@ -17,7 +17,7 @@
         "@types/marked": "0.7.4",
         "@types/sanitize-html": "1.23.2",
         "@types/uuid": "8.0.0",
-        "apollo-server": "2.14.4",
+        "apollo-server": "2.14.5",
         "apollo-upload-client": "13.0.0",
         "cookie-parser": "1.4.5",
         "aws-sdk": "2.698.0",
