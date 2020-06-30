@@ -29,7 +29,7 @@
         "react-dom": "16.13.1"
     },
     "devDependencies": {
-        "@babel/plugin-proposal-export-default-from": "7.10.1",
+        "@babel/plugin-proposal-export-default-from": "7.10.4",
         "typescript": "3.9.5"
     }
 }
