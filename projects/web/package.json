@@ -30,6 +30,6 @@
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-default-from": "7.10.4",
-        "typescript": "3.9.5"
+        "typescript": "3.9.6"
     }
 }
