@@ -28,7 +28,7 @@
         "nodemon": "2.0.4",
         "reflect-metadata": "0.1.13",
         "sanitize-html": "1.27.1",
-        "typescript": "3.9.6",
+        "typescript": "3.9.7",
         "uuid": "8.2.0"
     }
 }
