@@ -18,7 +18,7 @@
         "@types/sanitize-html": "1.23.3",
         "@types/uuid": "8.0.0",
         "apollo-server": "2.16.1",
-        "apollo-upload-client": "14.1.0",
+        "apollo-upload-client": "14.1.1",
         "cookie-parser": "1.4.5",
         "aws-sdk": "2.721.0",
         "dotenv": "8.2.0",
