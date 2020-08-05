@@ -20,7 +20,7 @@
         "apollo-server": "2.16.1",
         "apollo-upload-client": "14.1.1",
         "cookie-parser": "1.4.5",
-        "aws-sdk": "2.727.0",
+        "aws-sdk": "2.727.1",
         "dotenv": "8.2.0",
         "graphql": "15.3.0",
         "graphql-tools": "6.0.16",
