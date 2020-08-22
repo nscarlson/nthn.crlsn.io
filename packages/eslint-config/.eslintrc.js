@@ -6,11 +6,7 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: [
-        'plugin:@typescript-eslint/recommended',
-        'prettier',
-        'prettier/@typescript-eslint',
-    ],
+    extends: ['plugin:@typescript-eslint/recommended'],
     globals: {
         before: true,
         browser: true,
@@ -18,11 +14,14 @@ module.exports = {
         cy: true,
         Cypress: true,
         document: false,
+        
         fetch: true,
         navigator: false,
         window: false,
+        localStorage: true,
     },
     parser: '@typescript-eslint/parser',
+
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -36,9 +35,9 @@ module.exports = {
         'jest',
         'node',
         'promise',
-        'prettier',
         'react',
         '@typescript-eslint',
+        'prettier',
     ],
     rules: {
         '@typescript-eslint/no-var-requires': 'off',
@@ -214,7 +213,13 @@ module.exports = {
         'node/process-exit-as-throw': 'error',
         'object-shorthand': 'error',
         'prefer-const': ['error', { destructuring: 'all' }],
-        'prefer-destructuring': 'warn',
+        'prefer-destructuring': [
+            'warn',
+            {
+                array: false,
+                object: true,
+            },
+        ],
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',

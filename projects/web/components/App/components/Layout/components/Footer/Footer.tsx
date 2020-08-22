@@ -1,13 +1,6 @@
-import { node } from 'prop-types'
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-import * as S from './styles'
-
-interface FooterProps {
-    children: React.ReactNode
-}
-
-const Footer = ({ children }: FooterProps) => (
+const Footer = (): ReactElement => (
     <div>&copy;{new Date().getFullYear()} Nathan Carlson</div>
 )
 

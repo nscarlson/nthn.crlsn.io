@@ -49,7 +49,7 @@ the inspiration to this, and some handy implementation hints, came.
         }
     }
 
-    getMarkdownText = (md) => {
+    getMarkdownText = (md: string): { __html: string } => {
         const rawMarkup = marked(md, { sanitize: true })
         return { __html: rawMarkup }
     }

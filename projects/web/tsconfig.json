@@ -1,16 +1,30 @@
 {
-    "extends": "./tsconfig-base.json",
-    "compilerOptions": {
-        "allowJs": true,
-        "composite": false,
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "declaration": false,
-        "declarationMap": false,
-        "noEmit": true,
-        "module": "esnext",
-        "isolatedModules": true,
-        "rootDirs": ["components", "stories"],
-        "jsx": "preserve"
-    },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "composite": false,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "declaration": false,
+    "declarationMap": false,
+    "noEmit": true,
+    "module": "esnext",
+    "isolatedModules": true,
+    "rootDirs": [
+      "components",
+      "stories"
+    ],
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
