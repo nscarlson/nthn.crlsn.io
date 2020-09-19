@@ -23,7 +23,7 @@
         "aws-sdk": "2.756.0",
         "dotenv": "8.2.0",
         "graphql": "15.3.0",
-        "graphql-tools": "6.2.2",
+        "graphql-tools": "6.2.3",
         "marked": "1.1.1",
         "nodemon": "2.0.4",
         "reflect-metadata": "0.1.13",
