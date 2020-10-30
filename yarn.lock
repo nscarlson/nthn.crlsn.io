@@ -1455,12 +1455,12 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
   integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
 
-"@fusionauth/typescript-client@1.20.0":
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/@fusionauth/typescript-client/-/typescript-client-1.20.0.tgz#7f7d287a354e6c79af6a140880b003723e1614c3"
-  integrity sha512-grDoz/h8QyurDo7e1/1a0Ebkh79L6mun2GBOOhcz8JeYHYj9Rk4jg2tcEb+feAKHqccmM2loxR6F38FsLruT1g==
+"@fusionauth/typescript-client@1.20.1":
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/@fusionauth/typescript-client/-/typescript-client-1.20.1.tgz#5c2272a642bb8e497545b7d2e9fff048665039c1"
+  integrity sha512-VRP/XUpEJ9NTrqez96X3p0H+XVzvASttv5+GaTlyxu9Eplx3HfHdCwrPZS0f7QSpGfVMTlCRYgNO7t68QUh+jg==
   dependencies:
-    node-fetch "^2.6.0"
+    node-fetch "^2.6.1"
 
 "@graphql-modules/core@0.7.17":
   version "0.7.17"
@@ -9429,7 +9429,7 @@ node-fetch@2.6.0, node-fetch@^2.1.2, node-fetch@^2.2.0, node-fetch@^2.3.0, node-
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
-node-fetch@2.6.1:
+node-fetch@2.6.1, node-fetch@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
