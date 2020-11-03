@@ -57,6 +57,7 @@ openssl req -new \
     -out $CERTS_DIR/certificate.csr \
     -subj '/CN=localhost' \
     || exit_with_error $? !!
+    
 
 # Generate cert with CA and CSR
 # IMPORTANT: CA/Browser Forum ballot 193 https://cabforum.org/2017/03/17/ballot-193-825-day-certificate-lifetimes/
