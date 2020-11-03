@@ -46,6 +46,9 @@ openssl genrsa \
     -out $CERTS_DIR/certificate.key \
     2048 \
     || exit_with_error $? !!
+cp certificate.key nthn.crlsn.io.localhost.key
+cp certificate.key graphql.nthn.crlsn.io.localhost.key
+cp certificate.key fusionauth.crlsn.io.localhost.key
 
 # Generate CSR
 echo 'Generating localhost CSR'
@@ -69,6 +72,9 @@ openssl x509 -req \
     -days 825 \
     -sha256 \
     || exit_with_error $? !!
+cp certificate.crt nthn.crlsn.io.localhost.crt
+cp certificate.crt graphql.nthn.crlsn.io.localhost.crt
+cp certificate.crt fusionauth.crlsn.io.localhost.crt
 
 echo 'Priviledged - Add CA to MacOS Keychain'
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain $CERTS_DIR/certificate-authority.pem || exit 1

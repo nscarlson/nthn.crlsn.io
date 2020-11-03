@@ -60,9 +60,9 @@ dist/
 # Generated certificates
 certificate-authority.key
 certificate-authority.pem
-certificate.crt
+*.crt
 certificate.csr
-certificate.key
+*.key
 
 package-lock.json
 
