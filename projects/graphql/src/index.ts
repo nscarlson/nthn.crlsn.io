@@ -5,11 +5,9 @@ import cors from 'cors'
 import express from 'express'
 import { modules } from './modules'
 
-import getConfig from 'next/config'
-
 require('dotenv').config()
 
-const { publicRuntimeConfig } = getConfig()
+const { GRAPHQL_ENDPOINT } = process.env
 
 const { schema } = modules
 
@@ -29,7 +27,7 @@ const init = async () => {
     })
 
     const corsOptions = {
-        origin: `https://${publicRuntimeConfig.GRAPHQL_ENDPOINT}`,
+        origin: `${GRAPHQL_ENDPOINT}`,
         credentials: true,
     }
 
