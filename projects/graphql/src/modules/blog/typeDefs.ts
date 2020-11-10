@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server'
 
 export default gql`
-    scalar Upload
+    # scalar Upload
 
     type Query {
         postById(postId: ID!): Post
@@ -14,13 +14,13 @@ export default gql`
         title: String!
     }
 
-    type Mutation {
-        uploadToS3(input: uploadToS3Input!): S3Object!
-    }
+    # type Mutation {
+    #     uploadToS3(input: uploadToS3Input!): S3Object!
+    # }
 
-    input uploadToS3Input {
-        file: Upload!
-    }
+    # input uploadToS3Input {
+    #     file: Upload!
+    # }
 
     type S3Object {
         id: ID!

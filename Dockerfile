@@ -6,16 +6,8 @@ RUN apk add --no-cache git python make gcc g++ bash
 # Set up some configuration
 ENV FORCE_COLOR=1
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV YARN_CACHE_FOLDER /root/.yarn-cache/
 
 WORKDIR /crlsn
-
-# Copy in yarn offline mirror packages
-COPY ./yarn-offline-mirror ./yarn-offline-mirror
-
-# TODO: move to a script if possible
-# Copy package manifests
-# COPY packages/components/package.json ./packages/components/
 
 # TODO: move to a script if possible
 # Copy project manifests
@@ -28,7 +20,7 @@ COPY .yarnrc package.json yarn.lock ./
 RUN git init
 
 # Install packages
-RUN yarn --offline && rm -rf $YARN_CACHE_FOLDER
+RUN yarn
 
 # # Add chamber CLI for secrets
 # ADD https://github.com/segmentio/chamber/releases/download/v2.1.0/chamber-v2.1.0-linux-amd64 /usr/bin/chamber

@@ -1,4 +1,4 @@
-FROM node:11.15-alpine
+FROM node:15.1-alpine
 
 WORKDIR /graphql
 
