@@ -7,7 +7,7 @@ import { modules } from './modules'
 
 require('dotenv').config()
 
-const { GRAPHQL_ENDPOINT } = process.env
+const { PUBLIC_DOMAIN } = process.env
 
 const { schema } = modules
 
@@ -27,7 +27,7 @@ const init = async () => {
     })
 
     const corsOptions = {
-        origin: `${GRAPHQL_ENDPOINT}`,
+        origin: `https://${PUBLIC_DOMAIN}`,
         credentials: true,
     }
 
