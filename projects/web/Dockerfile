@@ -1,4 +1,4 @@
-FROM node:15.2-alpine
+FROM node:15.3-alpine
 
 WORKDIR /web
 
