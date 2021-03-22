@@ -25,9 +25,9 @@
         "next": "10.0.9",
         "next-build-id": "3.0.0",
         "next-with-apollo": "5.1.1",
-        "react": "17.0.1",
+        "react": "17.0.2",
         "react-apollo": "3.1.5",
-        "react-dom": "17.0.1"
+        "react-dom": "17.0.2"
     },
     "devDependencies": {
         "@babel/plugin-proposal-export-default-from": "7.12.13",
