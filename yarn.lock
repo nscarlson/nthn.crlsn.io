@@ -818,10 +818,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.3.tgz#c36ffa64a2a239bf948541a97b6ae8d729e09a9a"
   integrity sha512-rFnSUN/QOtnOAgqFRooTA3H57JLDm0QEG/jPdk+tLQNL/eWd+Aok8g3qCI+Q1xuDPWpGW/i9JySpJVsq8Q0s9w==
 
-"@fusionauth/typescript-client@1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fusionauth/typescript-client/-/typescript-client-1.27.0.tgz#2eeda3c2e1050755a383d021933faafb8304c9c3"
-  integrity sha512-X6RwFmplp0+bzxzfOrWy8VUxFuZD7DKPFsUppjHdB6y77MmWFx3u/LFD7NO8zZxxmB7BhSSlT8sH/lMlCq1SnQ==
+"@fusionauth/typescript-client@1.27.1":
+  version "1.27.1"
+  resolved "https://registry.yarnpkg.com/@fusionauth/typescript-client/-/typescript-client-1.27.1.tgz#a1fcdc831fa62dc95c2208cca8b3a804054065c4"
+  integrity sha512-c8Mv5lr1lQvl6kEW9OH16IDpU62thlzxsXmpYCeb94FeNHcdV7GjxgZA22U0Z8/6tip3e7kEF7zbtfcN6Gf3zw==
   dependencies:
     node-fetch "^2.6.1"
 
