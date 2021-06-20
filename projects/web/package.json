@@ -21,7 +21,7 @@
         "apollo-server": "2.25.1",
         "dotenv": "10.0.0",
         "formik": "2.2.9",
-        "graphql": "15.5.0",
+        "graphql": "15.5.1",
         "next": "11.0.0",
         "next-build-id": "3.0.0",
         "next-with-apollo": "5.1.1",
