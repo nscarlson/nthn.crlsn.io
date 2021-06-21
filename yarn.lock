@@ -8015,10 +8015,10 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-with-apollo@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/next-with-apollo/-/next-with-apollo-5.1.1.tgz#491e1112ba2ac1993cd669d610801c554b9ddd16"
-  integrity sha512-SqI+q4q8ib2YrRXhzVETTBKyk9zyCsHdfGdqCixVOZsnHMl/qsozNgw7/a5drGpsP3jAFQCbenAB3sYc6Gi04g==
+next-with-apollo@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/next-with-apollo/-/next-with-apollo-5.2.0.tgz#724a22d3d74d466177cf4838c44bd146854d6dd0"
+  integrity sha512-+mv14hEXyplnlJejcUf0BUaOuc4uU23ogmakHYHs1g65yZDoFR5kft9PrTsFH+njydrRHpxSuY4FarXDa3VIug==
   dependencies:
     isomorphic-unfetch "^3.0.0"
 
