@@ -13,7 +13,7 @@
         "@fusionauth/typescript-client": "1.28.1",
         "@graphql-modules/core": "0.7.17",
         "@types/cookie-parser": "1.4.2",
-        "@types/marked": "2.0.3",
+        "@types/marked": "2.0.4",
         "@types/sanitize-html": "2.3.2",
         "@types/uuid": "8.3.1",
         "apollo-server": "2.25.2",
