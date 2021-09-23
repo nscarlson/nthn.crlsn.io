@@ -23,7 +23,7 @@
         "graphql": "15.6.0",
         "graphql-tools": "8.2.0",
         "marked": "3.0.4",
-        "nodemon": "2.0.12",
+        "nodemon": "2.0.13",
         "reflect-metadata": "0.1.13",
         "sanitize-html": "2.5.1",
         "typescript": "4.4.3",
