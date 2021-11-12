@@ -22,7 +22,7 @@
         "dotenv": "10.0.0",
         "graphql": "16.0.1",
         "graphql-tools": "8.2.0",
-        "marked": "4.0.1",
+        "marked": "4.0.2",
         "nodemon": "2.0.15",
         "reflect-metadata": "0.1.13",
         "sanitize-html": "2.5.3",
