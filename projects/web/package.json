@@ -14,7 +14,7 @@
         "@emotion/styled": "11.6.0",
         "@fortawesome/fontawesome-free": "5.15.4",
         "@types/react": "17.0.38",
-        "@types/apollo-upload-client": "8.1.3",
+        "@types/apollo-upload-client": "17.0.0",
         "apollo-cache-inmemory": "1.6.6",
         "apollo-client": "2.6.10",
         "apollo-link-http": "1.5.17",
