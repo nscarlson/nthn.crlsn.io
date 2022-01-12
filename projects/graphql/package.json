@@ -14,7 +14,7 @@
         "@graphql-modules/core": "0.7.17",
         "@types/cookie-parser": "1.4.2",
         "@types/marked": "4.0.1",
-        "@types/sanitize-html": "2.6.1",
+        "@types/sanitize-html": "2.6.2",
         "@types/uuid": "8.3.4",
         "apollo-server": "3.6.1",
         "cookie-parser": "1.4.6",
