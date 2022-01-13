@@ -18,7 +18,7 @@
         "@types/uuid": "8.3.4",
         "apollo-server": "3.6.1",
         "cookie-parser": "1.4.6",
-        "aws-sdk": "2.1056.0",
+        "aws-sdk": "2.1057.0",
         "dotenv": "11.0.0",
         "graphql": "16.2.0",
         "graphql-tools": "8.2.0",
