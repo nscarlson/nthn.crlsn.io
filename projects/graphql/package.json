@@ -19,7 +19,7 @@
         "apollo-server": "3.6.2",
         "cookie-parser": "1.4.6",
         "aws-sdk": "2.1067.0",
-        "dotenv": "15.0.0",
+        "dotenv": "15.0.1",
         "graphql": "16.3.0",
         "graphql-tools": "8.2.0",
         "marked": "4.0.12",
