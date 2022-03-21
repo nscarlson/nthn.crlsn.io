@@ -16,7 +16,7 @@
         "@types/marked": "4.0.3",
         "@types/sanitize-html": "2.6.2",
         "@types/uuid": "8.3.4",
-        "apollo-server": "3.6.4",
+        "apollo-server": "3.6.5",
         "cookie-parser": "1.4.6",
         "aws-sdk": "2.1096.0",
         "dotenv": "16.0.0",
