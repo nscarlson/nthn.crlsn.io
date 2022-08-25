@@ -23,7 +23,7 @@
         "eslint-plugin-promise": "6.0.1",
         "eslint-plugin-react": "7.31.0",
         "prettier": "2.7.1",
-        "prettier-eslint-cli": "7.0.1",
+        "prettier-eslint-cli": "7.1.0",
         "prettier-eslint": "15.0.1",
         "@typescript-eslint/parser": "5.35.1",
         "@typescript-eslint/eslint-plugin": "5.35.1"
