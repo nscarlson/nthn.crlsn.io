@@ -1,4 +1,4 @@
-FROM keymetrics/pm2:16-alpine AS development
+FROM keymetrics/pm2:18-alpine AS development
 
 # install global dependencies
 RUN apk add --no-cache git python make gcc g++ bash
