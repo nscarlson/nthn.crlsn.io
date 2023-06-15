@@ -22,7 +22,7 @@
         "dotenv": "16.1.4",
         "formik": "2.4.2",
         "graphql": "16.6.0",
-        "next": "13.4.5",
+        "next": "13.4.6",
         "next-build-id": "3.0.0",
         "next-with-apollo": "5.3.0",
         "react": "18.2.0",
