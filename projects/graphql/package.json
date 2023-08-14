@@ -20,7 +20,7 @@
         "cookie-parser": "1.4.6",
         "aws-sdk": "2.1436.0",
         "dotenv": "16.3.1",
-        "graphql": "16.7.1",
+        "graphql": "16.8.0",
         "graphql-tools": "9.0.0",
         "marked": "7.0.2",
         "nodemon": "3.0.1",
