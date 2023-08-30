@@ -15,7 +15,7 @@
         "@types/cookie-parser": "1.4.3",
         "@types/marked": "5.0.1",
         "@types/sanitize-html": "2.9.0",
-        "@types/uuid": "9.0.2",
+        "@types/uuid": "9.0.3",
         "apollo-server": "3.12.0",
         "cookie-parser": "1.4.6",
         "aws-sdk": "2.1447.0",
