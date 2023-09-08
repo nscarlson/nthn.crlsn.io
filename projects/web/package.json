@@ -30,7 +30,7 @@
         "react-dom": "18.2.0"
     },
     "devDependencies": {
-        "@babel/plugin-proposal-export-default-from": "7.22.5",
+        "@babel/plugin-proposal-export-default-from": "7.22.17",
         "typescript": "5.2.2"
     }
 }
