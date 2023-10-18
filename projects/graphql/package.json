@@ -12,7 +12,7 @@
     "dependencies": {
         "@fusionauth/typescript-client": "1.47.0",
         "@graphql-modules/core": "0.7.17",
-        "@types/cookie-parser": "1.4.4",
+        "@types/cookie-parser": "1.4.5",
         "@types/marked": "5.0.2",
         "@types/sanitize-html": "2.9.2",
         "@types/uuid": "9.0.5",
