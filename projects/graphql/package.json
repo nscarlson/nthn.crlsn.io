@@ -10,7 +10,7 @@
         "start-dev:run": "nodemon --delay 80ms --inspect=0.0.0.0:4001 -r dotenv/config ./build/index.js"
     },
     "dependencies": {
-        "@fusionauth/typescript-client": "1.47.0",
+        "@fusionauth/typescript-client": "1.48.0",
         "@graphql-modules/core": "0.7.17",
         "@types/cookie-parser": "1.4.5",
         "@types/marked": "5.0.2",
