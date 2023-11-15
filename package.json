@@ -34,7 +34,7 @@
         "projects/*"
     ],
     "devDependencies": {
-        "lerna": "6.5.1",
+        "lerna": "6.6.2",
         "npm-run-all": "4.1.5"
     },
     "dependencies": {
