@@ -24,7 +24,7 @@
         "graphql-tools": "9.0.0",
         "marked": "9.1.6",
         "nodemon": "3.0.1",
-        "reflect-metadata": "0.1.13",
+        "reflect-metadata": "0.2.2",
         "sanitize-html": "2.11.0",
         "typescript": "5.2.2",
         "uuid": "9.0.1"
