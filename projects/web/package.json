@@ -20,7 +20,7 @@
         "apollo-link-http": "1.5.17",
         "apollo-server": "3.13.0",
         "dotenv": "16.3.1",
-        "formik": "2.4.5",
+        "formik": "2.4.9",
         "graphql": "16.8.1",
         "next": "13.5.6",
         "next-build-id": "3.0.0",
